@@ -39,5 +39,29 @@ same result holds with $3$ replaced with $9$. Similarly
 \[a-b+c\equiv a+b+c+11b+99c\equiv a+10b+100c\pmod{11}\]
 so $a-b+c$ is divisible by $11$ if and only $a+10b+100c$ is.
 
+\item\label{Exercise4} %4
+If $\left(x,y\right)\in\mathbb{Z}\times\mathbb{Z}$
+is a solution to $3x^2+2=y^2$ then $2\equiv y^2\pmod{3}$.
+By inspecting the multiplication table
+in $\mathbb{Z}/3\mathbb{Z}$ we see
+that this is impossible.
+
+\item %5
+This is the same as \autoref{Exercise4}.
+
+\item %6
+Note that $a$ is a unit in $\mathbb{Z}/n\mathbb{Z}$
+since $\left(a,n\right)=1$. Therefore
+$a_i\equiv a_j\pmod{n}$ if and only if $aa_i\equiv aa_j
+\pmod{n}$. This shows that
+the numbers $aa_1,\ldots,aa_{\phi{n}}$
+are pairwise incongruent $\pmod{n}$. Put
+$d=\left(aa_i,n\right)$. Then there exist $q,r\in\mathbb{Z}$
+such that
+\begin{equation}\label{CongruenceSystem}
+d=aa_iq+nr.\end{equation}
+But \autoref{CongruenceSystem} also shows that
+$d=\left(a,n\right)$ so that $d=1$.
+
 \end{enumerate}
 \end{document}
