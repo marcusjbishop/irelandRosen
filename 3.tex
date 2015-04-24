@@ -49,19 +49,42 @@ that this is impossible.
 \item %5
 This is the same as \autoref{Exercise4}.
 
-\item %6
+\item\label{RRS} %6
 Note that $a$ is a unit in $\mathbb{Z}/n\mathbb{Z}$
 since $\left(a,n\right)=1$. Therefore
 $a_i\equiv a_j\pmod{n}$ if and only if $aa_i\equiv aa_j
 \pmod{n}$. This shows that
-the numbers $aa_1,\ldots,aa_{\phi{n}}$
+the numbers $aa_1,\ldots,aa_{\phi\left(n\right)}$
 are pairwise incongruent $\pmod{n}$. Put
 $d=\left(aa_i,n\right)$. Then there exist $q,r\in\mathbb{Z}$
 such that
 \begin{equation}\label{CongruenceSystem}
 d=aa_iq+nr.\end{equation}
 But \autoref{CongruenceSystem} also shows that
-$d=\left(a,n\right)$ so that $d=1$.
+$d$ divides $\left(a,n\right)=1$ so that $d=1$.
+
+\item %7
+First observe that if $a_1,\ldots,a_{\phi\left(n\right)}$
+is a reduced residue system, then 
+$a_1,\ldots,a_{\phi\left(n\right)}$ represent the distinct
+classes of units in $\mathbb{Z}/n\mathbb{Z}$.
+It follows that if $b_1,\ldots,b_{\phi\left(n\right)}$
+is another reduced residue system, then
+$a_1a_2\cdots a_{\phi\left(n\right)}
+\equiv b_1b_2\cdots b_{\phi\left(n\right)}\pmod{n}$.
+Now taking $b_i=aa_i$ for all $1\le i\le\phi\left(n\right)$
+where $a$ is any number such that $\left(a,n\right)=1$,
+we see from \autoref{RRS} that
+$b_1,\ldots,b_{\phi\left(n\right)}$
+is also a reduced residue system. Thus
+\[a_1a_2\cdots a_{\phi\left(n\right)}
+\equiv b_1b_2\cdots b_{\phi\left(n\right)}\equiv
+a^{\phi\left(n\right)}a_1a_2\cdots a_{\phi\left(n\right)}
+\pmod{n}.\]
+Now since
+$a_1a_2\cdots a_{\phi\left(n\right)}$ is a unit, we have
+$a^{\phi\left(n\right)}\equiv 1\pmod{n}$.
+
 
 \end{enumerate}
 \end{document}
