@@ -28,6 +28,25 @@
 
 \begin{enumerate}
 \item %1
+Inspection of the multiplication table for $\mathbb{Z}/3\mathbb{Z}$
+shows that $\overline{5}$ occurs only as the products
+$\overline{1}\cdot\overline{5}=\overline{5}\cdot\overline{1}$
+and $\overline{1}$ occurs only as the products
+$\overline{1}\cdot\overline{1}=\overline{5}\cdot\overline{5}$.
+It follows that all the divisors of a number congruent to $5$
+must be congruent to either $1$ or $5$. However,
+$\overline{1}\cdot\overline{1}=\overline{1}$ shows that
+at least one prime factor of a number congruent to $5$
+must be congruent to $5$.
+
+Now suppose that only finitely many primes are congruent
+to $5$, say $p_1=5,p_2=11,\cdots,p_k$. Then the number
+$N=5p_2p_3\cdots p_k+5$ is congruent to $5$.
+However, $N$ is not divisible by $p_1=5$ since $p_2\cdots p_k$
+is not. Also, $N$ is not divisible by any of $p_2,p_3,\ldots,p_k$
+since $5$ is not. This contradicts the assertion above that
+$N$ is divisible by a prime congruent to $5$.
+
 \item %2
 \item %3
 \begin{equation}\label{SumDigits}
@@ -84,6 +103,21 @@ a^{\phi\left(n\right)}a_1a_2\cdots a_{\phi\left(n\right)}
 Now since
 $a_1a_2\cdots a_{\phi\left(n\right)}$ is a unit, we have
 $a^{\phi\left(n\right)}\equiv 1\pmod{n}$.
+
+\item %8
+Since $\mathbb{Z}/p\mathbb{Z}$ is a field, all of its
+nonzero elements are units. This means that
+\begin{equation}\label{PRRS}
+1,2,\ldots,p-1
+\end{equation}
+is a reduced residue system $\pmod{p}$. It follows
+that for any $k$ in \autoref{PRRS} there exists
+a unique element $b_k$ of \autoref{PRRS} such that
+$kb_k\equiv k\pmod{p}$.
+Note that $k=b_k$ if and only if $0=k^2-1\equiv
+\left(k+1\right)\left(k-1\right)\pmod{p}$.
+This means that $k=b_k$ if and only if $k\equiv 1$
+or $k\equiv -1\pmod{p}$.
 
 
 \end{enumerate}
