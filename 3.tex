@@ -22,6 +22,7 @@
 \let\inf\relax\DeclareMathOperator*{\inf}{\mathsf{inf}}
 \let\lim\relax\DeclareMathOperator*{\lim}{\mathsf{lim}}
 \everymath{\displaystyle}
+\renewcommand{\theenumi}{3.\arabic{enumi}}
 \begin{document}
 \maketitle
 \thispagestyle{empty}
@@ -104,7 +105,7 @@ Now since
 $a_1a_2\cdots a_{\phi\left(n\right)}$ is a unit, we have
 $a^{\phi\left(n\right)}\equiv 1\pmod{n}$.
 
-\item %8
+\item\label{BK} %8
 Since $\mathbb{Z}/p\mathbb{Z}$ is a field, all of its
 nonzero elements are units. This means that
 \begin{equation}\label{PRRS}
@@ -113,12 +114,17 @@ nonzero elements are units. This means that
 is a reduced residue system $\pmod{p}$. It follows
 that for any $k$ in \autoref{PRRS} there exists
 a unique element $b_k$ of \autoref{PRRS} such that
-$kb_k\equiv k\pmod{p}$.
-Note that $k=b_k$ if and only if $0=k^2-1\equiv
+$kb_k\equiv 1\pmod{p}$.
+Note that $k=b_k$ if and only if $0\equiv k^2-1\equiv
 \left(k+1\right)\left(k-1\right)\pmod{p}$.
 This means that $k=b_k$ if and only if $k\equiv 1$
 or $k\equiv -1\pmod{p}$.
 
+\item %9
+By~\autoref{BK} every factor $k$ of $\left(p-1\right)!$ corresponds
+with a unique factor $b_k$ for which $kb_k\equiv 1\pmod{p}$.
+Furthermore, $k\ne b_k$ for every $k$ except $k=1$ and $k=p-1$.
+It follows that $\left(p-1\right)!\equiv p-1\pmod{p}$.
 
 \end{enumerate}
 \end{document}
