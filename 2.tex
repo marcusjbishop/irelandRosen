@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{multicol,graphicx}
+\usepackage[colorlinks,breaklinks,linkcolor=red,citecolor=blue]
+{hyperref} 
+\def\sectionautorefname~#1\null{\S#1\null}
+\usepackage{charter,amsmath,amssymb,breakurl}
+\def\equationautorefname~#1\null{(#1)\null}
+\def\itemautorefname~#1\null{(#1)\null}
+\usepackage{eulervm}
+\usepackage[letterpaper,margin=.75in]{geometry}
+\renewcommand{\pmod}[1]{\left(\mathsf{mod}\;#1\right)}
+\title{Chapter 2}
+\author{}\date{}
+\let\ord\relax\DeclareMathOperator{\ord}{\mathsf{ord}}
+\let\ln\relax\DeclareMathOperator{\ln}{\mathsf{ln}}
+\let\deg\relax\DeclareMathOperator{\deg}{\mathsf{deg}}
+\let\sin\relax\DeclareMathOperator{\sin}{\mathsf{sin}}
+\let\arctan\relax\DeclareMathOperator{\arctan}{\mathsf{arctan}}
+\let\cos\relax\DeclareMathOperator{\cos}{\mathsf{cos}}
+\let\sec\relax\DeclareMathOperator{\sec}{\mathsf{sec}}
+\let\min\relax\DeclareMathOperator*{\min}{\mathsf{min}}
+\let\max\relax\DeclareMathOperator*{\max}{\mathsf{max}}
+\let\sup\relax\DeclareMathOperator*{\sup}{\mathsf{sup}}
+\let\inf\relax\DeclareMathOperator*{\inf}{\mathsf{inf}}
+\let\lim\relax\DeclareMathOperator*{\lim}{\mathsf{lim}}
+\everymath{\displaystyle}
+\renewcommand{\theenumi}{2.\arabic{enumi}}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{enumerate}
+\item %1
+Suppose that $m_1\left(x\right),m_2\left(x\right),\ldots,m_N\left(x\right)$
+is a complete list of monic irreducible elements of $k\left[x\right]$
+and fix an even number $D>0$. Now if $f\left(x\right)\in k\left[x\right]$
+is any polynomial of degree less than $D$ then we can write
+$f\left(x\right)=g\left(x\right)h\left(x\right)^2$
+for some $g\left(x\right),h\left(x\right)\in k\left[x\right]$
+with $h\left(x\right)$ squarefree. Note that since
+\[D=\deg f\left(x\right)\ge\deg h\left(x\right)^2\]
+it follows that $\deg h\left(x\right)\le D/2$.
+Note also that since $g\left(x\right)$ is squarefree, we can write
+\[g\left(x\right)=\alpha m_1\left(x\right)^{\epsilon_1}
+m_2\left(x\right)^{\epsilon_2}\cdots
+m_N\left(x\right)^{\epsilon_N}\]
+for some unit $\alpha\in k$ and $\epsilon_i=0,1$ for all
+$1\le i\le N$. There are $\left|k\right|2^N$ possible combinations
+of $\alpha,\epsilon_1,\ldots,\epsilon_N$.
+
+Observe that there are $\left|k\right|^{D}$ elements of $k\left[x\right]$
+of degree less than $D$.
+Similarly there are $\left|k\right|^{D/2}$ elements
+of degree less than $D/2$. It follows from the observations above that
+\[\left|k\right|^D\le\left|k\right|^{D/2}\cdot\left|k\right|2^N
+\qquad\iff\qquad\left|k\right|^{D/2-1}\le 2^N\]
+which is false for large enough $D$. 
+
+\item %2
+Put \[S=\left\{\left.\frac{a}{b}\right|\text{
+$\ord_{p_i}{a}\ge\ord_{p_i}{b}$ for all $1\le i\le t$}\right\}.\]
+Suppose $\frac{a}{b},\frac{c}{d}\in S$. 
+Then abbreviating $\ord_{p_i}$ to $\ord$ we have
+\[\ord\left(ad+bc\right)
+\ge\min\left\{\ord{ad},\ord{bc}\right\}
+=\min\left\{\ord{a}\ord{d},\ord{b}\ord{c}\right\}
+\ge\ord{b}\ord{d}\]
+since both elements of
+$\left\{\ord{a}\ord{d},\ord{b}\ord{c}\right\}$ are greater
+than or equal to $\ord{b}\ord{d}$ by the assumption
+$\frac{a}{b},\frac{c}{d}\in S$. 
+It follows that $\frac{a}{b}+\frac{c}{d}
+=\frac{ad+bc}{bd}\in S$.
+
+\item %3 
+If $p_1,p_2,\ldots,p_t$ were the only primes, then
+put $n=p_1p_2\cdots p_t$. Now any integer
+$2<i<n$ has a prime divisor, which by assumption
+must be one of $p_1,p_2,\ldots,p_t$. It follows that
+$\left(i,n\right)\ne 1$ for any $2<i<n$ so that
+$\varphi\left(n\right)=1$. But this is in contradiction with
+\[\varphi\left(n\right)=
+n\left(1-\frac{1}{p_1}\right)
+\left(1-\frac{1}{p_2}\right)
+\cdots\left(1-\frac{1}{p_t}\right)\]
+unless $n=2$, a case that we rule out, knowing that
+$2$ is not the only prime.
+\end{enumerate}
+\end{document}
