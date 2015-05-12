@@ -85,5 +85,59 @@ n\left(1-\frac{1}{p_1}\right)
 \cdots\left(1-\frac{1}{p_t}\right)\]
 unless $n=2$, a case that we rule out, knowing that
 $2$ is not the only prime.
+
+\item\label{Mersenne} %4
+
+\item %5
+Taking $a=2$ in \autoref{Mersenne} we define the sequence
+$x_k=2^{2^k}+1$ for $k\ge 0$.
+Note that by \autoref{Mersenne} $\left(x_j,x_k\right)=1$
+for any $j\ne k$. It follows that if $p_k$ is any prime
+factor of $x_k$, then $p_k$ is a sequence of distinct primes.
+
+\item %6
+There must be an elegant solution to this.
+Each $\left[\frac{n}{p^j}\right]$ contributes one
+to each multiple of $p^j$ appearing as a factor
+of $n!$. So
+$\sum_{j\ge 1}\left[\frac{n}{p^j}\right]$ is the same
+as $\sum_{i=1}^n\ord_p{i}=\ord_p{n!}$.
+
+\item %7
+$\ord_p{n!}=\sum_{j\ge 1}\left[\frac{n}{p^j}\right]
+\le \sum_{j\ge 1}\frac{n}{p^j}
+=n\left(\frac{\frac{1}{p}}{1-\frac{1}{p}}\right)
+=\frac{n}{p-1}$.
+Now since $N=\prod_{p\mid N}p^{\ord_p{N}}$ for any integer
+$N>0$ we have
+\begin{equation}\label{OrdApproximation}
+\left(n!\right)^{1/n}=\left(\prod_{p|n!}p^{\ord_p{n!}}\right)^{1/n}
+=\prod_{p|n!}p^{\frac{1}{n}\ord_p{n!}}
+\le\prod_{p|n!}p^{\frac{1}{p-1}}
+\end{equation}
+
+\item %8
+The lefthand side of \autoref{OrdApproximation} goes to
+$\infty$ as $n\to\infty$. However, the righthand side only
+takes finitely many values if there were only finitely many
+primes.
+
+\item %9
+If $p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$
+is the prime factorization of $n$, then
+\[f\left(n\right)=f\left(p_1^{\alpha_1}\right)
+f\left(p_2^{\alpha_2}\right)\cdots f\left(p_k^{\alpha_k}\right)\]
+since the factors
+$p_1^{\alpha_1},p_2^{\alpha_2},\ldots, p_k^{\alpha_k}$
+are relatively prime.
+
+\item %10
+Suppose $\left(a,b\right)=1$. Now if $d|ab$ then we can
+write $d=d_1d_2$ where $d_1|a$ and $d_2|b$. It follows that
+$\left(d_1,d_2\right)=1$. Thus
+\[g\left(ab\right)=\sum_{d|ab}f\left(d\right)
+=\sum_{\substack{d_1|a\\d_2|b}}f\left(d_1d_2\right)
+=\sum_{d_1|a}f\left(d_1\right)\sum_{d_2|b}f\left(d_2\right)
+=g\left(a\right)g\left(b\right).\]
 \end{enumerate}
 \end{document}
