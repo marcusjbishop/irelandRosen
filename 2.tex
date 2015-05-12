@@ -122,7 +122,7 @@ $\infty$ as $n\to\infty$. However, the righthand side only
 takes finitely many values if there were only finitely many
 primes.
 
-\item %9
+\item\label{Determined} %9
 If $p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$
 is the prime factorization of $n$, then
 \[f\left(n\right)=f\left(p_1^{\alpha_1}\right)
@@ -131,7 +131,7 @@ since the factors
 $p_1^{\alpha_1},p_2^{\alpha_2},\ldots, p_k^{\alpha_k}$
 are relatively prime.
 
-\item %10
+\item\label{GMultiplicative} %10
 Suppose $\left(a,b\right)=1$. Now if $d|ab$ then we can
 write $d=d_1d_2$ where $d_1|a$ and $d_2|b$. It follows that
 $\left(d_1,d_2\right)=1$. Thus
@@ -139,5 +139,34 @@ $\left(d_1,d_2\right)=1$. Thus
 =\sum_{\substack{d_1|a\\d_2|b}}f\left(d_1d_2\right)
 =\sum_{d_1|a}f\left(d_1\right)\sum_{d_2|b}f\left(d_2\right)
 =g\left(a\right)g\left(b\right).\]
+
+\item %11
+Put $f\left(n\right)=\frac{\mu\left(n\right)}{n}$ for $n\in\mathbb{N}$
+and suppose $\left(a,b\right)=1$.
+If $a=b=1$ then $f\left(ab\right)=1=f\left(a\right)f\left(b\right)$.
+If one of $a,b$ is not squarefree, then $ab$ is not squarefree
+(and in fact the converse holds, since $\left(a,b\right)=1$)
+so that $f\left(ab\right)=0=f\left(a\right)f\left(b\right)$.
+Finally, if $a=p_1p_2\cdots p_k$ and $b=q_1q_2\ldots q_l$
+where $p_1,p_2,\ldots,p_k,q_1,q_2,\ldots,q_l$ are distinct
+primes, then
+\[f\left(ab\right)=\frac{\left(-1\right)^{k+l}}{ab}
+=\frac{\left(-1\right)^k}{a}\frac{\left(-1\right)^l}{b}
+=f\left(a\right)f\left(b\right).\]
+This shows that $f$ is multiplicative.
+Then $g\left(n\right)=\sum_{d|n}
+\frac{\mu\left(d\right)}{d}$ is also multiplicative
+by \autoref{GMultiplicative}. 
+Putting $h\left(n\right)=\frac{\varphi\left(n\right)}{n}$
+we observe that
+\[g\left(p^k\right)=1-\frac{1}{p}=h\left(p^k\right).\] 
+In other words, $g$ and $h$ agree on prime powers.
+But since $g$ is determined by its values
+on prime powers by \autoref{Determined}, this means that $g=h$.
+It follows that
+$\sum_{d|n}\frac{\mu\left(d\right)}{d}
+=\frac{\varphi\left(n\right)}{n}$
+or $\varphi\left(n\right)
+=n\sum_{d|n}\frac{\mu\left(d\right)}{d}$.
 \end{enumerate}
 \end{document}
