@@ -62,12 +62,15 @@ $\ord_{p_i}{a}\ge\ord_{p_i}{b}$ for all $1\le i\le t$}\right\}.\]
 Suppose $\frac{a}{b},\frac{c}{d}\in S$. 
 Then abbreviating $\ord_{p_i}$ to $\ord$ we have
 \[\ord\left(ad+bc\right)
-\ge\min\left\{\ord{ad},\ord{bc}\right\}
-=\min\left\{\ord{a}\ord{d},\ord{b}\ord{c}\right\}
-\ge\ord{b}\ord{d}\]
+\ge\min\left\{\ord\left(ad\right),
+\ord\left(bc\right)\right\}
+=\min\left\{\ord\left(a\right)\ord\left(d\right),
+\ord\left(b\right)\ord\left(c\right)\right\}
+\ge\ord\left(b\right)\ord\left(d\right)\]
 since both elements of
-$\left\{\ord{a}\ord{d},\ord{b}\ord{c}\right\}$ are greater
-than or equal to $\ord{b}\ord{d}$ by the assumption
+$\left\{\ord\left(a\right)\ord\left(d\right),
+\ord\left(b\right)\ord\left(c\right)\right\}$ are greater
+than or equal to $\ord\left(b\right)\ord\left(d\right)$ by the assumption
 $\frac{a}{b},\frac{c}{d}\in S$. 
 It follows that $\frac{a}{b}+\frac{c}{d}
 =\frac{ad+bc}{bd}\in S$.
@@ -87,6 +90,20 @@ unless $n=2$, a case that we rule out, knowing that
 $2$ is not the only prime.
 
 \item\label{Mersenne} %4
+The factorization
+\[\left(a^{2^n}-1\right)
+=\left(a^{2^m}+1\right)\left(a^{2^n-2^m}
+-a^{2^n-2\left(2^m\right)}+a^{2^n-3\left(2^m\right)}
+-\cdots+a^{2^n-\left(2^{n-m}-1\right)2^m}-1\right)\]
+shows that if $p$ is an odd prime dividing $a^{2^m}+1$
+then $p$ also divides $a^{2^n}-1$.
+It follows that $p$ cannot be a factor of both $a^{2^m}+1$
+and $a^{2^n}+1$ since then $p$ also divides
+$2^{2^n}+1-\left(2^{2^n}-1\right)=2$, a contradiction.
+Finally, if $a$ is odd, then $a^{2^n}+1$ and $a^{2^m}+1$
+are both even, so $2$ is their only common prime factor.
+If $a$ is even, then $a^{2^n}+1$ and $a^{2^m}+1$
+are both odd and thereby have no prime factors in common.
 
 \item %5
 Taking $a=2$ in \autoref{Mersenne} we define the sequence
@@ -140,7 +157,7 @@ $\left(d_1,d_2\right)=1$. Thus
 =\sum_{d_1|a}f\left(d_1\right)\sum_{d_2|b}f\left(d_2\right)
 =g\left(a\right)g\left(b\right).\]
 
-\item %11
+\item\label{MuMultiplicative} %11
 Put $f\left(n\right)=\frac{\mu\left(n\right)}{n}$ for $n\in\mathbb{N}$
 and suppose $\left(a,b\right)=1$.
 If $a=b=1$ then $f\left(ab\right)=1=f\left(a\right)f\left(b\right)$.
@@ -168,5 +185,40 @@ $\sum_{d|n}\frac{\mu\left(d\right)}{d}
 =\frac{\varphi\left(n\right)}{n}$
 or $\varphi\left(n\right)
 =n\sum_{d|n}\frac{\mu\left(d\right)}{d}$.
+
+\item %12
+\item %13
+If $\left(a,b\right)=1$ then
+\[\sigma_k\left(a,b\right)
+=\sum_{d\mid ab}d^k=\sum_{d_1\mid a}\sum_{d_2\mid b}
+\left(d_1d_2\right)^k
+=\sum_{d_1\mid a}d_1^k\sum_{d_2\mid b}d_2^k
+=\sigma_k\left(a\right)\sigma_k\left(b\right)\]
+shows that $\sigma_k$ is multiplicative.
+Now if $p_1^{\alpha_1}\cdots p_t^{\alpha_t}$
+is the prime factorization of $n$ then
+\begin{align*}
+\sigma_k\left(n\right)
+&=\left(1^k+p_1^k+\cdots p_1^{k\alpha_1}\right)
+\cdots\left(1^k+p_t^k+\cdots p_t^{k\alpha_t}\right)\\
+&=\left(\frac{p_1^{k\left(\alpha_1+1\right)}-1}{p_1^k-1}\right)
+\cdots\left(\frac{p_1^{k\left(\alpha_t+1\right)}-1}{p_t^k-1}\right)
+\end{align*}
+
+\item %14
+Knowing that $\mu$ is multiplicative by the argument
+in \autoref{MuMultiplicative} we know that
+\begin{align*}
+h\left(a,b\right)
+&=\sum_{d_1\mid a}\sum_{d_2\mid b}
+\mu\left(\frac{ab}{d_1d_2}\right)f\left(d_1d_2\right)\\
+&=\sum_{d_1\mid a}
+\mu\left(\frac{a}{d_1}\right)f\left(d_1\right)
+\sum_{d_2\mid b}
+\mu\left(\frac{b}{d_2}\right)f\left(d_2\right)\\
+&=h\left(a\right)h\left(b\right)
+\end{align*}
+if $\left(a,b\right)=1$.
+
 \end{enumerate}
 \end{document}
