@@ -220,5 +220,35 @@ h\left(a,b\right)
 \end{align*}
 if $\left(a,b\right)=1$.
 
+\item %15
+Knowing that $\sum_{d\mid n}1=v\left(n\right)$
+we have $\sum_{d\mid n}\mu\left(\frac{n}{d}\right)v\left(d\right)=1$
+by M\"obius inversion.
+Similarly, knowing that $\sum_{d\mid n}d=\sigma\left(n\right)$
+we have $\sum_{d\mid n}\mu\left(\frac{n}{d}\right)\sigma\left(d\right)=n$.
+
+\item %16
+If $p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$
+is the prime factorization of $n$, then
+$v\left(n\right)=\prod_{j=1}^k\left(\alpha_j+1\right)$
+is odd if and only if $\alpha_1,\alpha_2,\ldots,\alpha_k$
+are all even, if and only if $n$ is a square.
+
+\item %17
+If $p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$
+is the prime factorization of $n$, then
+we observe that if $p_i$ is an odd prime factor of $n$ then
+$1+p_i+p_i^2+\cdots+p_i^{\alpha_i}$ is odd if and only
+if the number of terms
+$\alpha_i+1$ is odd, if and only if $\alpha_i$ is even.
+If $2$ is a prime factor of $n$, say $p_1=2$ then
+$1+2+2^2+\cdots +2^{\alpha_1}$ is odd for any value of $\alpha_1$.
+It follows that
+\[\sigma\left(n\right)=\left(1+p_1+\cdots+p_1^{\alpha_1}\right)
+\cdots\left(1+p_k+\cdots+p_k^{\alpha_k}\right)\]
+is odd if and only if
+all the $\alpha_i$ corresponding with odd primes $p_i$
+are odd, which happens when $n$ is a square or twice a square.
+
 \end{enumerate}
 \end{document}
