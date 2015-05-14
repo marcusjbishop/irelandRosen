@@ -187,6 +187,32 @@ or $\varphi\left(n\right)
 =n\sum_{d|n}\frac{\mu\left(d\right)}{d}$.
 
 \item %12
+By \autoref{MuMultiplicative} $\varphi$ and $\mu$ are multiplicative.
+So $f\left(n\right)=\sum_{d\mid n}\mu\left(d\right)
+\varphi\left(d\right)$ is also
+multiplicative by \autoref{GMultiplicative}
+and thereby determined by its values on prime powers by
+\autoref{Determined}.
+We calculate \[f\left(p^\alpha\right)=1-\varphi\left(p\right)
+=1-\left(p-1\right)=2-p\]
+for any prime $p$ and $\alpha\ge 1$.
+Now if $p_1^{\alpha_1}\cdots p_k^{\alpha_k}$
+is the prime factorization of $n$ where $\alpha_i\ge 1$
+for all $1\le i\le k$ then
+$f\left(n\right)=\prod_{i=1}^k\left(2-p_i\right)$.
+Similarly $g\left(n\right)
+=\sum_{d\mid n}\mu\left(d\right)^2
+\varphi\left(d\right)^2$ is also
+multiplicative and $g\left(p^\alpha\right)=1+\left(p-1\right)^2$
+so that $g\left(n\right)
+=\prod_{i=1}^k\left(1+\left(p-1\right)^2\right)$.
+Finally $h\left(n\right)
+=\sum_{d\mid n}\frac{\mu\left(d\right)}
+{\varphi\left(d\right)}$ is also
+multiplicative and $h\left(p^\alpha\right)=\frac{p-2}{p-1}$
+so that $h\left(n\right)
+=\prod_{i=1}^k\frac{p_i-2}{p_i-1}$.
+
 \item %13
 If $\left(a,b\right)=1$ then
 \[\sigma_k\left(a,b\right)
@@ -249,6 +275,34 @@ It follows that
 is odd if and only if
 all the $\alpha_i$ corresponding with odd primes $p_i$
 are odd, which happens when $n$ is a square or twice a square.
+
+\item %18
+It's probably true that
+the invariant factor form of $\mathbb{Z}_m\times
+\mathbb{Z}_n$ is
+$\mathbb{Z}_{\left(m,n\right)}\times
+\mathbb{Z}_{\left[m,n\right]}$.
+It would then follow that the unit groups of the two
+have the same size, so $\varphi\left(m\right)\varphi\left(n\right)
+=\varphi\left(\left(m,n\right)\right)\times\varphi\left(
+\left[m,n\right]\right)$.
+
+\item %19
+\item %20
+
+\item %21
+If $p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_k^{\alpha_k}$
+is the prime factorization of $n$, then
+\[\sum_{d\mid n}\wedge\left(d\right)
+=\sum_{i=1}^{k}\sum_{j=1}^{\alpha_i}\wedge\left(p_i^j\right)
+=\sum_{i=1}^{k}\alpha_i\ln{p_i}
+=\sum_{i=1}^{k}\ln{p_i^{\alpha_i}}
+=\ln\left(\prod_{i=1}^{k}p_i^{\alpha_i}\right)
+=\ln{n}\]
+so that $\wedge\left(n\right)=\sum_{d\mid n}\mu\left(\frac{n}{d}\right)
+\ln{d}$ by M\"obius inversion.
+
+
 
 \end{enumerate}
 \end{document}
