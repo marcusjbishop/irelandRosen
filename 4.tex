@@ -36,5 +36,40 @@ The powers of $2\pmod{29}$ are
 7, 14, 28, 27, 25, 21, 13, 26, 23, 17, 5, 10, 20, 11, 22, 15, 1.
 Since there are $28=\left|U\left(\mathbb{Z}/29\mathbb{Z}\right)\right|$
 of these, $2$ is a primitive root $\pmod{29}$.
+
+\item %2
+2,6,7,8 are primitive roots $\pmod{11}$.
+2,6,7,11 are primitive roots $\pmod{13}$.
+3, 5, 6, 7, 10, 11, 12, 14 are primitive roots $\pmod{17}$.
+Finally, 2, 3, 10, 13, 14, 15 are primitive roots $\pmod{19}$.
+
+\item %3
+Since $a$ is primitive $\pmod{p^n}$ the numbers
+\begin{equation}\label{ListPN}
+a,a^2,a^3,\ldots,a^{p^{n-1}\left(p-1\right)}
+\end{equation}
+are distinct $\pmod{p^n}$, only the last element being
+congruent to $1\pmod{p^n}$.
+Now suppose $j-i<p-1$. Then
+\begin{equation}\label{ResiduesPN}
+a^i-a^j=a^i\left(1-a^{j-i}\right)
+\end{equation}
+But $a^i\not\equiv 0\pmod{p}$
+since otherwise $a^i\equiv 0\pmod{p^n}$, which is impossible
+since $a$ is a primitive root $\pmod{p^n}$.
+Furthermore $1-a^{j-i}\not\equiv 0\pmod{p}$ since otherwise
+$a^{j-i}\equiv 1\pmod{p^n}$, contradicting the assertion
+above that
+$a^{p^{n-1}\left(p-1\right)}$ is the only element of
+\autoref{ListPN} congruent to $1\pmod{p^n}$.
+It follows that $a^i\not\equiv a^j\pmod{p}$ for all
+$\left|i-j\right|<p-1$. In particular, $a,a^2,a^3,\ldots,a^{p-1}$
+are inequivalent $\pmod{p}$ so that $a$ is a primitive root
+$\pmod{p}$.
+
+However, we note that if $j-i=p-1$ then \autoref{ResiduesPN}
+shows that $a^i-a^j\equiv 0\pmod{p}$ by Fermat's Little Theorem.
+This shows that the elements of \autoref{ListPN}, when reduced
+$\pmod{p}$, cycle through the nonzero residues.
 \end{enumerate}
 \end{document}
