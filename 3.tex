@@ -149,18 +149,18 @@ for which $kb_k\equiv 1\pmod{n}$. It follows that
 \[a_1a_2\cdots a_Na_{N+1}\cdots a_{\varphi\left(n\right)}
 =a_1a_2\cdots a_N.\]
 Next note that $a^2\equiv 1\pmod{n}$ implies that
-$\left(-a\right)^2\equiv 1\pmod{n}$. Relabeling again
-so that $\overline{a_1}<\overline{a_2}<\cdots<\overline{a_N}$
-it follows that
-$\overline{a_i}=-\overline{a_{N-i+1}}$ for all $1\le i\le N$.
-If in fact $N$ is even then
-\begin{multline*}
-a_1a_2\ldots a_N=\left(a_1a_2\ldots a_{N/2}\right)
-\left(a_{N/2+1}\cdots a_N\right)
-\equiv \left(a_1a_N\right)\left(a_2a_{N-1}\right)\cdots
-\left(a_{N/2}a_{N/2+1}\right)\\
+$\left(-a\right)^2\equiv 1\pmod{n}$.
+Thus every $a_i$ can be paired with another element
+$a_j$ for which $a_j\equiv -a_i\pmod{N}$.
+Note that $i\ne j$ since then $2a_i\equiv 0\pmod{N}$
+would contradict the assumption that $\left(a_i,n\right)=1$.
+Thus $N$ is even and there are $N/2$ pairs.
+Relabeling so that $a_1,a_2,\ldots,a_{N/2}$ represent
+distinct pairs, we have
+\begin{equation*}
+a_1a_2\ldots a_N
 \equiv a_1\left(-a_1\right)a_2\left(-a_2\right)
-\cdots a_{N/2}\left(-a_{N/2}\right)\equiv \left(-1\right)^{N/2}
-\end{multline*}
+\cdots a_{N/2}\left(-a_{N/2}\right)\equiv \left(-1\right)^{N/2}.
+\end{equation*}
 \end{enumerate}
 \end{document}

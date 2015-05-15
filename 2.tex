@@ -302,7 +302,17 @@ is the prime factorization of $n$, then
 so that $\wedge\left(n\right)=\sum_{d\mid n}\mu\left(\frac{n}{d}\right)
 \ln{d}$ by M\"obius inversion.
 
-
+\item %22
+We claim that if $\left(n,k\right)=1$ then $\left(n,n-k\right)=1$.
+Indeed, if $d=\left(n,n-k\right)$ then $d\mid n$ and $d\mid n-k$
+so that $d\mid n-\left(n-k\right)=k$. Then $d\mid n$ and $d\mid k$
+imply that $d\mid 1$ so that $d=1$. Now note that
+\[\sum_{\substack{1\le k\le n\\\left(n,k\right)=1}}k+\left(n-k\right)
+=\sum_{\substack{1\le k\le n\\\left(n,k\right)=1}}n=n\varphi\left(n\right)\]
+counts every term of
+$\sum_{\substack{1\le k\le n\\\left(n,k\right)=1}}k$ twice so that
+$\sum_{\substack{1\le k\le n\\\left(n,k\right)=1}}k
+=\frac{n\varphi\left(n\right)}{2}$.
 
 \end{enumerate}
 \end{document}
