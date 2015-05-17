@@ -71,5 +71,39 @@ However, we note that if $j-i=p-1$ then \autoref{ResiduesPN}
 shows that $a^i-a^j\equiv 0\pmod{p}$ by Fermat's Little Theorem.
 This shows that the elements of \autoref{ListPN}, when reduced
 $\pmod{p}$, cycle through the nonzero residues.
+
+\item\label{2T+1} %4
+First we note that by Wilson's Theorem
+\[-1\equiv\prod_{j=1}^{4t}a^j
+\equiv a^{\sum_{j=1}^kj}
+\equiv a^{\frac{4t\left(4t+1\right)}{2}}
+\equiv a^{2t}\pmod{p}\]
+where the last reduction follows from Fermat's Little Theorem.
+Now to verify that $-a$ is a primitive root $\pmod{p}$
+we need to check that $1\not\equiv\left(-a\right)^k\pmod{p}$
+for any $k<4t$. For even $k$ this holds because $a$ is a primitive root.
+If $k$ is odd then
+$\left(-a\right)^k=-a^k\not\equiv 1$ unless
+$a^k\equiv -1$, which is impossible by the observation above
+since $2t\ne k$ as $k$ is odd.
+
+\item %5
+Suppose $a$ is a primitive root $\pmod{p}$. As in \autoref{2T+1}
+we use Wilson's Theorem to calculate $-a\equiv a^{2t+2}\pmod{p}$.
+Now if $k$ is such that
+\[1\equiv\left(-a\right)^k=a^{k\left(2t+2\right)}\]
+then knowing that $4t+2=p-1$ is the smallest exponent $r$ for
+which $a^r\equiv 1\pmod{p}$ we conclude that
+$4t+2\mid k\left(2t+2\right)$ or $2t+1\mid k\left(t+1\right)$.
+Since $2t+1$ and $t+1$ are relatively prime we conclude $2t+1\mid k$.
+Thus $2t+1=\frac{p-1}{2}$ is the order of $-a$.
+
+If conversely $a$ has order $2t+1$, then we first observe that
+$2k+1$ is not the order of $-a$ since $\left(-a\right)^{2t+1}
+\equiv -a^{2t+1}\equiv -1$.
+However $\left(-a\right)^{4t+2}=a^{2\left(2t+1\right)}\equiv 1$
+so the order of $-a$ divides $4t+2$. Now since no
+$k$ with $1\le k\le 4t+2$ divides $4t+2$ other than $2t+1$ or $2$,
+we conclude that $4t+2$ is the order of $-a$.
 \end{enumerate}
 \end{document}
