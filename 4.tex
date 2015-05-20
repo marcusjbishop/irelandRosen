@@ -105,5 +105,46 @@ However $\left(-a\right)^{4t+2}=a^{2\left(2t+1\right)}\equiv 1$
 so the order of $-a$ divides $4t+2$. Now since no
 $k$ with $1\le k\le 4t+2$ divides $4t+2$ other than $2t+1$ or $2$,
 we conclude that $4t+2$ is the order of $-a$.
+
+\item %6
+\item %7
+
+\item %8
+If $a$ is a primitive root $\pmod{p}$ then $a^d\not\equiv 1\pmod{p}$
+for {\em all proper} divisors $d$ of $p-1$. In particular $a^d\not\equiv 1$
+for divisors of the form $d=\frac{p-1}{q}$ where $q$ is a prime divisor
+of $p-1$.
+
+Conversely, suppose that $a^{\frac{p-1}{q}}\not\equiv 1$
+for all prime divisors
+$q$ of $p-1$. Now if $d$ is any {\em proper} divisor of $p-1$ then
+$\ord_q{d}<\ord_q\left(p-1\right)$ for some prime divisor $q$ of $p-1$.
+It follows that $d$ divides $\frac{p-1}{q}$. This means that $a^d$ can't be
+congruent to $1$, because then $a^{\frac{p-1}{q}}\equiv 1$.
+We conclude that $a^d\not\equiv 1$ for all proper divisors $d$ of
+$p-1$. This means that $a$ is a primitive root $\pmod{p}$.
+
+\item %9
+If $p=2$ then $1$ is the only primitive root $\pmod{2}$
+and $1\equiv -1\equiv\left(-1\right)^{\varphi\left(2-1\right)}
+\pmod{2}$.
+If $p=3$ then $2$ is the only primitive root $\pmod{3}$
+and $2\equiv -1\equiv\left(-1\right)^{\varphi\left(3-1\right)}$.
+We assume otherwise that $p>3$.
+
+If $r$ is any primitive root $\pmod{p}$ then the other
+primitive roots are the other generators of 
+of $U\left(\mathbb{Z}_p\right)$.
+This group being cyclic of size $p-1$,
+these are $r^k$ where $\left(p-1,k\right)=1$.
+Knowing that $\frac{\left(p-1\right)\varphi\left(p-1\right)}{2}$
+is the sum of the least residues $\pmod{p-1}$
+prime to $p-1$, it follows that
+\[\prod_{\left(p-1,k\right)=1}r^k
+=r^{\frac{\left(p-1\right)\varphi\left(k-1\right)}{2}}
+=\left(r^{p-1}\right)^{\frac{\varphi\left(p-1\right)}{2}}=1.\]
+Now since $\varphi\left(p-1\right)$ is even, it follows that
+$1=\left(-1\right)^{\varphi\left(p-1\right)}$ is the product
+of the primitive roots $\pmod{p}$.
 \end{enumerate}
 \end{document}
