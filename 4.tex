@@ -196,5 +196,25 @@ Thus the solutions to $3y\equiv 18\pmod{18}$ are $y=6,12,18$.
 Now since $x=2^y$ the solutions to $x^3\equiv 1\pmod{19}$
 are $x=2^6\equiv 7,
 2^{12}\equiv 11,2^{18}\equiv 1$. 
+
+Using the same method we find that $x=1,4,13,16$ are the solutions
+to $x^4\equiv 1\pmod{17}$.
+
+\item\label{X7E29} %17
+If $x=2^y$ then $x^7\equiv 1\pmod{29}$ if and only
+if $2^{7y}\equiv 2^{28}\pmod{29}$ which in turn holds
+if and only if $7y\equiv 28\pmod{28}$. The latter has solutions
+$y=4,8,12,16,20,24,28$ which correspond with solutions
+$x=1,7,16,20,23,24,25$ of the original congurence.
+
+\item %18
+By \autoref{X7E29}
+$x=1,7,16,20,23,24,25$ are the solutions to $x^7-1\equiv 0\pmod{29}$.
+Now since $x^7-1=\left(x-1\right)\left(1+x+x^2+x^3+x^4+x^5+x^6\right)$
+and $x=1$ is a solution to $x-1\equiv 0$ it follows that
+$x=7,16,20,23,24,25$ are the solutions to 
+$1+x+x^2+x^3+x^4+x^5+x^6\equiv 0$.
+
+
 \end{enumerate}
 \end{document}
