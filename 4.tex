@@ -10,6 +10,7 @@
 \usepackage[letterpaper,margin=.75in]{geometry}
 \renewcommand{\pmod}[1]{\left(\mathsf{mod}\;#1\right)}
 \title{Chapter 4}
+\renewcommand{\theenumi}{4.\arabic{enumi}}
 \author{}\date{}
 \let\ord\relax\DeclareMathOperator{\ord}{\mathsf{ord}}
 \let\ln\relax\DeclareMathOperator{\ln}{\mathsf{ln}}
@@ -24,7 +25,6 @@
 \let\inf\relax\DeclareMathOperator*{\inf}{\mathsf{inf}}
 \let\lim\relax\DeclareMathOperator*{\lim}{\mathsf{lim}}
 \everymath{\displaystyle}
-\renewcommand{\theenumi}{2.\arabic{enumi}}
 \begin{document}
 \maketitle
 \thispagestyle{empty}
@@ -183,5 +183,18 @@ has order dividing $n$ but $\left(m,n\right)=1$ we must
 have $r_1=r_2=0$. This shows that $m$ and $n$ both divide $k$
 so that $mn=\left[m,n\right]$ also divides $k$. It follows
 that $mn$ is the order of $ab$.
+
+\item %15
+
+\item %16
+2 is a primitive root $\pmod{19}$. Then $x^3\equiv 1\pmod{19}$
+is equivalent to $2^{3y}\equiv 2^{18}\pmod{19}$
+which in turn is equivalent to $3y\equiv 18\pmod{18}$.
+$y=6$ is clearly a solution to the latter, and the remaining
+$3=\left(3,18\right)$ solutions differ by $\frac{18}{3}=6$.
+Thus the solutions to $3y\equiv 18\pmod{18}$ are $y=6,12,18$.
+Now since $x=2^y$ the solutions to $x^3\equiv 1\pmod{19}$
+are $x=2^6\equiv 7,
+2^{12}\equiv 11,2^{18}\equiv 1$. 
 \end{enumerate}
 \end{document}
