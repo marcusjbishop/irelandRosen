@@ -148,6 +148,20 @@ of the primitive roots $\pmod{p}$.
 
 \item %10
 \item %11
+Let $g$ be a primitive element $\pmod{p}$ and observe that
+\begin{equation}\label{PowerSum}
+\left(1-g^k\right)\left(g^k+g^{2k}+g^{3k}+\cdots
++g^{\left(p-1\right)k}\right)
+\equiv g^k-g^k=0\pmod{p}.
+\end{equation}
+If $k$ is not a multiple of $p-1$ then $1-g^k\not\equiv 0$
+so that \[0=g^k+g^{2k}+\cdots+g^{\left(p-1\right)k}
+=1^k+2^k+\cdots+\left(p-1\right)^k.\]
+If $k$ is a multiple of $p-1$ then $j^k\equiv 1$ for all
+$1\le j\le k-1$ by Fermat's Little Theorem.
+It follows that $1^k+2^k+\cdots+\left(p-1\right)^k=p-1
+\equiv -1\pmod{p}$.
+
 \item Let $g$ be a primitive root $\pmod{p}$.
 The cyclic group $U\left(\mathbb{Z}/p\mathbb{Z}\right)$
 has exactly one element of every order $d$ for every divisor
@@ -205,7 +219,7 @@ If $x=2^y$ then $x^7\equiv 1\pmod{29}$ if and only
 if $2^{7y}\equiv 2^{28}\pmod{29}$ which in turn holds
 if and only if $7y\equiv 28\pmod{28}$. The latter has solutions
 $y=4,8,12,16,20,24,28$ which correspond with solutions
-$x=1,7,16,20,23,24,25$ of the original congurence.
+$x=1,7,16,20,23,24,25$ of the original congruence.
 
 \item %18
 By \autoref{X7E29}
@@ -215,6 +229,40 @@ and $x=1$ is a solution to $x-1\equiv 0$ it follows that
 $x=7,16,20,23,24,25$ are the solutions to 
 $1+x+x^2+x^3+x^4+x^5+x^6\equiv 0$.
 
+\item %19
+$x^3\equiv a\pmod{7}$ is solvable if and only if
+$1\equiv a^{\frac{\varphi\left(7\right)}
+{\left(3,\varphi\left(7\right)\right)}}
+\equiv a^2\pmod{7}$, which holds for $a=1,6$.
+
+$x^3\equiv a\pmod{11}$ is solvable if and only if
+$1 \equiv a^{10}\pmod{11}$, which holds for all
+$a\in U\left(\mathbb{Z}_{11}\right)$
+
+$x^3\equiv a\pmod{13}$ is solvable if and only if
+$1\equiv
+a^4\pmod{7}$, which holds for $a=1,5,8,12$.
+
+\item %20
+Let $H=\left\{k^d\mid 1\le k\le p-1\right\}$.
+If $x,y\in H$ then $x=j^d$ and $y=k^d$ for some $1\le j,k\le p-1$.
+Then $xy^{-1}=j^d\left(k^d\right)^{-1}
+=j^d\left(k^{-1}\right)^d=\left(jk^{-1}\right)^d\in H$
+shows that $H$ is a subgroup of $U\left(\mathbb{Z}/p\mathbb{Z}\right)$.
+The elements of $H$ are the $a$ for which $x^d\equiv a\pmod{p}$
+is solvable. Now since $d\mid p-1$ we have $\left(d,p-1\right)=d$.
+So $x^d\equiv a$ is solvable if $a^{\frac{p-1}{d}}\equiv 1$.
+The latter has $\frac{p-1}{d}$ solutions $a$ by Proposition~4.1.2
+so $\left|H\right|=\frac{p-1}{d}$.
+
+If $p=11$ and $d=5$ then $H=\left\{1,10\right\}
+=\left\langle 10\right\rangle\le U\left(\mathbb{Z}/11\mathbb{Z}\right)$.
+
+If $p=17$ and $d=4$ then $H=\left\{1,4,13,16\right\}
+=\left\langle 4\right\rangle\le U\left(\mathbb{Z}/17\mathbb{Z}\right)$.
+
+If $p=19$ and $d=6$ then $H=\left\{1,7,11\right\}
+=\left\langle 7\right\rangle\le U\left(\mathbb{Z}/19\mathbb{Z}\right)$.
 
 \end{enumerate}
 \end{document}
