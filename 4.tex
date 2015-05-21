@@ -48,11 +48,10 @@ Since $a$ is primitive $\pmod{p^n}$ the numbers
 \begin{equation}\label{ListPN}
 a,a^2,a^3,\ldots,a^{p^{n-1}\left(p-1\right)}
 \end{equation}
-are distinct $\pmod{p^n}$, only the last element being
-congruent to $1\pmod{p^n}$.
-Now suppose $j-i<p-1$. Then
+are distinct $\pmod{p^n}$.
+Now let $0<i<j$ and suppose that $j-i<p-1$. Then
 \begin{equation}\label{ResiduesPN}
-a^i-a^j=a^i\left(1-a^{j-i}\right)
+a^i-a^j=a^i\left(1-a^{j-i}\right).
 \end{equation}
 But $a^i\not\equiv 0\pmod{p}$
 since otherwise $a^i\equiv 0\pmod{p^n}$, which is impossible
@@ -63,11 +62,11 @@ above that
 $a^{p^{n-1}\left(p-1\right)}$ is the only element of
 \autoref{ListPN} congruent to $1\pmod{p^n}$.
 It follows that $a^i\not\equiv a^j\pmod{p}$ for all
-$\left|i-j\right|<p-1$. In particular, $a,a^2,a^3,\ldots,a^{p-1}$
-are inequivalent $\pmod{p}$ so that $a$ is a primitive root
+$\left|i-j\right|<p-1$. In particular $a,a^2,a^3,\ldots,a^{p-1}$
+are inequivalent $\pmod{p}$ so $a$ is a primitive root
 $\pmod{p}$.
 
-However, we note that if $j-i=p-1$ then \autoref{ResiduesPN}
+However, we note that if $p-1$ divides $j-i$ then \autoref{ResiduesPN}
 shows that $a^i-a^j\equiv 0\pmod{p}$ by Fermat's Little Theorem.
 This shows that the elements of \autoref{ListPN}, when reduced
 $\pmod{p}$, cycle through the nonzero residues.
@@ -263,6 +262,24 @@ If $p=17$ and $d=4$ then $H=\left\{1,4,13,16\right\}
 
 If $p=19$ and $d=6$ then $H=\left\{1,7,11\right\}
 =\left\langle 7\right\rangle\le U\left(\mathbb{Z}/19\mathbb{Z}\right)$.
+
+\item %21
+\item %22
+\item %23
+\item %24
+
+\item %25
+{\bf Proof of Proposition~4.2.2.}
+Write $x=\left(-1\right)^y5^z$ with $y=0,1$ and $0\le z\le 2^{e-2}$.
+Write $a=\left(-1\right)^j5^k$ with $j=0,1$ and $0\le k\le 2^{e-2}$.
+Then $x^n\equiv a\pmod{2^e}$ is solvable if and only if
+$\left(\left(-1\right)^y5^z\right)^n=-5^{nz}
+\equiv\left(-1\right)^j5^k\pmod{2^e}$ is solvable, since $n$ is odd.
+If this is true, $j$ must be 1, so we can simplify the congruence
+to $5^{nz}\equiv 5^k\pmod{2^e}$. This congruence in turn is solvable
+if and only if $nz\equiv k\pmod{2^{e-1}}$ is solvable. The latter
+is solvable and has exactly one solution
+since $\left(n,2^{e-1}\right)=1$ divides $k$.
 
 \end{enumerate}
 \end{document}
