@@ -25,11 +25,43 @@
 \let\inf\relax\DeclareMathOperator*{\inf}{\mathsf{inf}}
 \let\lim\relax\DeclareMathOperator*{\lim}{\mathsf{lim}}
 \everymath{\displaystyle}
+
+\makeatletter
+\def\legendre@dash#1#2{\hb@xt@#1{%
+  \kern-#2\p@
+  \cleaders\hbox{\kern.5\p@
+    \vrule\@height.2\p@\@depth.2\p@\@width\p@
+    \kern.5\p@}\hfil
+  \kern-#2\p@
+  }}
+\def\@legendre#1#2#3#4#5{\mathopen{}\left(
+  \sbox\z@{$\genfrac{}{}{0pt}{#1}{#3#4}{#3#5}$}%
+  \dimen@=\wd\z@
+  \kern-\p@\vcenter{\box0}\kern-\dimen@\vcenter{\legendre@dash\dimen@{#2}}\kern-\p@
+  \right)\mathclose{}}
+\newcommand\legendre[2]{\mathchoice
+  {\@legendre{0}{1}{}{#1}{#2}}
+  {\@legendre{1}{.5}{\vphantom{1}}{#1}{#2}}
+  {\@legendre{2}{0}{\vphantom{1}}{#1}{#2}}
+  {\@legendre{3}{0}{\vphantom{1}}{#1}{#2}}
+}
+\def\dlegendre{\@legendre{0}{1}{}}
+\def\tlegendre{\@legendre{1}{0.5}{\vphantom{1}}}
+\makeatother
+
 \begin{document}
 \maketitle
 \thispagestyle{empty}
 
 \begin{enumerate}
 \item %1
+$\left(5,10,15\right)\equiv\left(-2,3,1\right)\pmod{7}$
+so $\mu=1$ and $\tlegendre{5}{7}=-1$.
+
+$\left(3,6,9,12,15\right)\equiv\left(3,-5,-2,1,4\right)\pmod{11}$
+so $\mu=2$ and $\tlegendre{3}{11}=1$.
+
+$\left(6,12,18,24,30,36\right)\equiv\left(6,-1,5,-2,4,-3\right)\pmod{13}$
+so $\mu=3$ and $\tlegendre{3}{11}=-1$.
 \end{enumerate}
 \end{document}
