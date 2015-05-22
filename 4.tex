@@ -44,32 +44,11 @@ of these, $2$ is a primitive root $\pmod{29}$.
 Finally, 2, 3, 10, 13, 14, 15 are primitive roots $\pmod{19}$.
 
 \item %3
-Since $a$ is primitive $\pmod{p^n}$ the numbers
-\begin{equation}\label{ListPN}
-a,a^2,a^3,\ldots,a^{p^{n-1}\left(p-1\right)}
-\end{equation}
-are distinct $\pmod{p^n}$.
-Now let $0<i<j$ and suppose that $j-i<p-1$. Then
-\begin{equation}\label{ResiduesPN}
-a^i-a^j=a^i\left(1-a^{j-i}\right).
-\end{equation}
-But $a^i\not\equiv 0\pmod{p}$
-since otherwise $a^i\equiv 0\pmod{p^n}$, which is impossible
-since $a$ is a primitive root $\pmod{p^n}$.
-Furthermore $1-a^{j-i}\not\equiv 0\pmod{p}$ since otherwise
-$a^{j-i}\equiv 1\pmod{p^n}$, contradicting the assertion
-above that
-$a^{p^{n-1}\left(p-1\right)}$ is the only element of
-\autoref{ListPN} congruent to $1\pmod{p^n}$.
-It follows that $a^i\not\equiv a^j\pmod{p}$ for all
-$\left|i-j\right|<p-1$. In particular $a,a^2,a^3,\ldots,a^{p-1}$
-are inequivalent $\pmod{p}$ so $a$ is a primitive root
-$\pmod{p}$.
-
-However, we note that if $p-1$ divides $j-i$ then \autoref{ResiduesPN}
-shows that $a^i-a^j\equiv 0\pmod{p}$ by Fermat's Little Theorem.
-This shows that the elements of \autoref{ListPN}, when reduced
-$\pmod{p}$, cycle through the nonzero residues.
+More generally, observe that if $a^i\equiv a^j\pmod{p^k}$
+for any $1\le k\le n$ then $i\equiv j\pmod{p^{k-1}\left(p-1\right)}$.
+When $k=1$ this means that the residues
+$a,a^2,a^3,\ldots,a^{p-1}$ are pairwise inequivalent
+$\pmod{p}$ so that $a$ is a primitive element $\pmod{p}$.
 
 \item\label{2T+1} %4
 First we note that by Wilson's Theorem
@@ -270,16 +249,50 @@ If $p=19$ and $d=6$ then $H=\left\{1,7,11\right\}
 
 \item %25
 {\bf Proof of Proposition~4.2.2.}
-Write $x=\left(-1\right)^y5^z$ with $y=0,1$ and $0\le z\le 2^{e-2}$.
-Write $a=\left(-1\right)^j5^k$ with $j=0,1$ and $0\le k\le 2^{e-2}$.
+Suppose that $n$ is odd.
+Write $x=\left(-1\right)^y5^z$ with $y=0,1$ and $0\le z<2^{e-2}$ and
+write $a=\left(-1\right)^j5^k$ with $j=0,1$ and $0\le k<2^{e-2}$.
 Then $x^n\equiv a\pmod{2^e}$ is solvable if and only if
 $\left(\left(-1\right)^y5^z\right)^n=-5^{nz}
 \equiv\left(-1\right)^j5^k\pmod{2^e}$ is solvable, since $n$ is odd.
 If this is true, $j$ must be 1, so we can simplify the congruence
 to $5^{nz}\equiv 5^k\pmod{2^e}$. This congruence in turn is solvable
-if and only if $nz\equiv k\pmod{2^{e-1}}$ is solvable. The latter
+if and only if $nz\equiv k\pmod{2^{e-2}}$ is solvable. The latter
 is solvable and has exactly one solution
-since $\left(n,2^{e-1}\right)=1$ divides $k$.
+since $\left(n,2^{e-2}\right)=1$ divides $k$.
 
+Suppose that $n$ is even and $a\equiv 1\pmod{4}$.
+Note that the elements of the subgroup
+$\left\{5^j\mid 0\le j<2^{e-2}\right\}
+\le U\left(\mathbb{Z}/2^e\mathbb{Z}\right)$
+are congruent to $1\pmod{4}$
+while the elements of the coset
+$\left\{-5^j\mid 0\le j<2^{e-2}\right\}$
+are congruent to $3\pmod{4}$
+since $5^j\equiv 1\pmod{4}$ for any $j\in\mathbb{N}$.
+Write $x=\left(-1\right)^y5^z$ with $y=0,1$ and $0\le z<2^{e-2}$ and
+write $a=5^k$ with $0\le k<2^{e-2}$.
+Then $x^n\equiv a\pmod{2^e}$ is solvable if and only if
+$\left(\left(-1\right)^y5^z\right)^n=5^{nz}
+\equiv 5^k\pmod{2^e}$ is solvable, since $n$ is even.
+Note that if $z$ is a solution to
+$5^{nz}\equiv 5^k\pmod{2^e}$, then $-z$ is also a solution.
+That is, $y$ can take either value $0$ or $1$.
+This congruence in turn is solvable
+if and only if $nz\equiv k\pmod{2^{e-2}}$ is solvable.
+Putting $d=\left(n,2^{e-2}\right)$ the latter
+is solvable and has $d$ solutions (amounting to $2d$ solutions
+to the original conguence)
+if and only if $d\mid k$.
+
+Conversely, suppose that $n$ is even
+and $x^n\equiv a\pmod{2^e}$ has a solution $x$.
+Writing $a=\left(-1\right)^i5^j$ and $x=\pm 5^k$
+for some $i=0,1$ and $0\le j,k<2^{e-2}$ the congruence
+becomes $5^{kn}\equiv\left(-1\right)^i5^j$.
+As mentioned above $5^{kn}\equiv 1\pmod{4}$
+so $i=0$ and $a\equiv 1\pmod{4}$.
+Finally $a^{\frac{2^{e-2}}{d}}=\left(5^{kn}\right)^{\frac{2^{e-2}}{d}}
+=\left(5^{2^{e-2}}\right)^{\frac{kn}{d}}\equiv 1\pmod{2^e}$.
 \end{enumerate}
 \end{document}
