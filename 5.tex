@@ -63,5 +63,13 @@ so $\mu=2$ and $\tlegendre{3}{11}=1$.
 
 $\left(6,12,18,24,30,36\right)\equiv\left(6,-1,5,-2,4,-3\right)\pmod{13}$
 so $\mu=3$ and $\tlegendre{3}{11}=-1$.
+
+To calculate $\tlegendre{-1}{p}$ we observe that $\mu$ is the
+number of negative entries in the list
+\[-1,-2,-3,-4,-5,\ldots,-\frac{p-1}{2}.\]
+If $p=4k+1$ for some $k$ then $\mu=\frac{p-1}{2}=2k$ is even
+so $\tlegendre{-1}{p}=1$.
+If $p=4k+3$ for some $k$ then $\mu=\frac{p-1}{2}=2k+1$ is odd
+so $\tlegendre{-1}{p}=-1$.
 \end{enumerate}
 \end{document}
