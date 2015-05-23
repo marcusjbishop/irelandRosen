@@ -64,7 +64,15 @@ so $\mu=2$ and $\tlegendre{3}{11}=1$.
 $\left(6,12,18,24,30,36\right)\equiv\left(6,-1,5,-2,4,-3\right)\pmod{13}$
 so $\mu=3$ and $\tlegendre{3}{11}=-1$.
 
-\item %2
+To calculate $\tlegendre{-1}{p}$ we observe that $\mu$ is the
+number of negative entries in the list
+\[-1,-2,-3,-4,-5,\ldots,-\frac{p-1}{2}.\]
+If $p=4k+1$ for some $k$ then $\mu=\frac{p-1}{2}=2k$ is even
+so $\tlegendre{-1}{p}=1$.
+If $p=4k+3$ for some $k$ then $\mu=\frac{p-1}{2}=2k+1$ is odd
+so $\tlegendre{-1}{p}=-1$.
+
+\item\label{NumberSolutionsQuadratic} %2
 If $a$ is a residue then there are $2=1+\dlegendre{a}{p}$ solutions.
 If $a$ is a nonresidue then there are $0=1+\dlegendre{a}{p}$ solutions.
 If $p\mid a$ then there is $1=1+\dlegendre{a}{p}$ solution,
@@ -112,6 +120,27 @@ $\sum_{x=0}^{p-1}\dlegendre{ax+b}{p}
 =\sum_{j=0}^{p-1}\dlegendre{j}{p}
 =\dlegendre{0}{p}+\sum_{j=1}^{p-1}\dlegendre{j}{p}=0$
 by \autoref{SumLegendre}.
+
+\item %6
+For each $0\le y\le p-1$ 
+the congruence $x^2-y^2\equiv a\pmod{p}$ 
+has $1+\dlegendre{y^2+a}{p}$ solutions
+by \autoref{NumberSolutionsQuadratic}.
+It follows that $x^2-y^2\equiv a\pmod{p}$ has
+$\sum_{y=0}^{p-1}1+\dlegendre{y^2+a}{p}$ solutions.
+
+\item %7
+Under the change of variables $\begin{cases}u&=x+y\\v&=x-y\end{cases}$
+the congruence $x^2-y^2\equiv a\pmod{p}$ becomes
+\begin{equation}\label{VariableChange}
+uv\equiv a\pmod{p}.
+\end{equation}
+If $p\mid a$ then either $u\equiv 0$ or $v\equiv 0$ (or both)
+leading to $2p-1$ solutions to
+\autoref{VariableChange}.
+If $p\nmid a$ then \autoref{VariableChange} has $p-1$ solutions,
+namely $\left(u,v\right)=\left(z,\frac{a}{z}\right)$
+with $1\le z\le p-1$.
 
 \end{enumerate}
 \end{document}
