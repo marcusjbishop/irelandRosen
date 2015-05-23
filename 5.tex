@@ -63,5 +63,55 @@ so $\mu=2$ and $\tlegendre{3}{11}=1$.
 
 $\left(6,12,18,24,30,36\right)\equiv\left(6,-1,5,-2,4,-3\right)\pmod{13}$
 so $\mu=3$ and $\tlegendre{3}{11}=-1$.
+
+\item %2
+If $a$ is a residue then there are $2=1+\dlegendre{a}{p}$ solutions.
+If $a$ is a nonresidue then there are $0=1+\dlegendre{a}{p}$ solutions.
+If $p\mid a$ then there is $1=1+\dlegendre{a}{p}$ solution,
+namely $x=0$.
+
+\item %3
+Since $p\nmid a$ we can factor out $a$ and complete the square.
+This produces
+\begin{equation}\label{QuadraticFormula}
+\left(x+\frac{b}{2a}\right)^2\equiv\frac{b^2-4ac}{\left(2a\right)^2.}
+\end{equation}
+Now if $p\mid b^2-4ac$ then \autoref{QuadraticFormula} has
+one solution, namely $x\equiv -\frac{b}{2a}$ and accordingly
+$1=1+\dlegendre{b^2-4ac}{p}$. Otherwise assume that
+$p\nmid b^2-4ac$.
+If $y^2\equiv b^2-4ac$ is solvable, then it has two solutions $y$
+leading to the two solutions $x=\frac{y-b}{2a}$
+of \autoref{QuadraticFormula}. Accordingly
+$2=1+\dlegendre{b^2-4ac}{p}$ in this situation. Finally
+$0=1+\dlegendre{b^2-4ac}{p}$ if there are no solutions to
+$y^2\equiv b^2-4ac$.
+
+\item\label{SumLegendre} %4
+$\dlegendre{a}{p}=1$ if and only if
+$x^2\equiv a\pmod{p}$ is solvable if and only if
+$a^{\frac{p-1}{2}}\equiv 1\pmod{p}$. The latter has
+$\left(p-1,\frac{p-1}{2}\right)=\frac{p-1}{2}$ solutions $a$.
+Thus $\frac{p-1}{2}$ of the numbers $1,2,\ldots,p-1$ are
+residues $\pmod{p}$ while the remaining $\frac{p-1}{2}$ are nonresidues.
+It follows that $\sum_{a=1}^{p-1}\dlegendre{a}{p}=0$.
+
+\item %5
+We claim that the numbers $0,a,2a,3a,\ldots,\left(p-1\right)a$
+are pairwise inequivalent $\pmod{p}$. Indeed, if $0\le j,k\le p-1$
+and $ja\equiv ka\pmod{p}$ then $p\mid a\left(j-k\right)$.
+So $p\mid j-k$ since $p\nmid a$. This is only possible if $j=k$
+as $\left|j-k\right|<p$.
+
+Similarly
+$b,b+a,b+2a,\ldots,b+\left(p-1\right)a$ are pairwise inequivalent
+$\pmod{p}$. This means that
+\[\left\{b,b+a,b+2a,\ldots,b+\left(p-1\right)a\right\}
+=\left\{0,1,2,\ldots,p-1\right\}\] so that
+$\sum_{x=0}^{p-1}\dlegendre{ax+b}{p}
+=\sum_{j=0}^{p-1}\dlegendre{j}{p}
+=\dlegendre{0}{p}+\sum_{j=1}^{p-1}\dlegendre{j}{p}=0$
+by \autoref{SumLegendre}.
+
 \end{enumerate}
 \end{document}
