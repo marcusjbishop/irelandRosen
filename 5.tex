@@ -126,8 +126,8 @@ For each $0\le y\le p-1$
 the congruence $x^2-y^2\equiv a\pmod{p}$ 
 has $1+\dlegendre{y^2+a}{p}$ solutions
 by \autoref{NumberSolutionsQuadratic}.
-It follows that $x^2-y^2\equiv a\pmod{p}$ has
-$\sum_{y=0}^{p-1}1+\dlegendre{y^2+a}{p}$ solutions.
+It follows that $x^2-y^2\equiv a$ has
+$\sum_{y=0}^{p-1}\left(1+\dlegendre{y^2+a}{p}\right)$ solutions.
 
 \item %7
 Under the change of variables $\begin{cases}u&=x+y\\v&=x-y\end{cases}$
@@ -141,6 +141,50 @@ leading to $2p-1$ solutions to
 If $p\nmid a$ then \autoref{VariableChange} has $p-1$ solutions,
 namely $\left(u,v\right)=\left(z,\frac{a}{z}\right)$
 with $1\le z\le p-1$.
+
+\item %8
+\begin{align*}
+\sum_{y=0}^{p-1}\dlegendre{y^2+a}{p}
+&=-p+\sum_{y=0}^{p-1}\left(1+\dlegendre{y^2+a}{p}\right)\\
+&=-p+\begin{cases}2p-1&p\mid a\\p-1&p\nmid a\end{cases}\\
+&=\begin{cases}p-1&p\mid a\\-1&p\nmid a\end{cases}
+\end{align*}
+
+\item\label{ProductOddSquares} %9
+\begin{align*}
+1^23^2\cdots\left(p-1\right)^2
+&\equiv\left(-1\right)^{\frac{p-2}{2}}
+1\left(-1\right)3\left(-3\right)
+\cdots\left(p-2\right)\left(-\left(p-2\right)\right)\\
+&\equiv\left(-1\right)^{\frac{p-1}{2}}
+1\left(p-1\right)3\left(p-3\right)
+\cdots\left(p-2\right)\left(2\right)\\
+&\equiv\left(-1\right)^{\frac{p-1}{2}}
+\left(p-1\right)!\\
+&\equiv\left(-1\right)^{\frac{p+1}{2}}
+\end{align*}
+As a remark, recall
+that there are exactly $\frac{p-1}{2}$
+residues, but for each $1\le k\le p-1$ both of
+$k,p-k$ have the same square. Exactly one of $k,p-k$ being even and
+the other odd, if follows that the residues are the squares of the 
+even elements of $1,2,\ldots,p-1$. The residues are also the squares
+of the odd elements of $1,2,\ldots,p-1$. This means that the
+expression $1^23^2\cdots\left(p-1\right)^2$ in this exercise
+is simply the product of the residues.
+
+\item %10
+By \autoref{ProductOddSquares}
+\[r_1r_2\cdots r_{\frac{p-1}{2}}=\left(-1\right)^{\frac{p+1}{2}}
+=\begin{cases}1&\text{if $p\equiv 3\pmod{4}$}\\
+-1&\text{if $p\equiv 1\pmod{4}$}\end{cases}.\]
+Another way to do this is to use a primitive root $g\pmod{p}$.
+The residues are simply the even powers of $g$, so
+\[r_1r_2\cdots r_{\frac{p-1}{2}}
+=\prod_{k=1}^{\frac{p-1}{2}}g^{2k}
+=g^{\sum_{k=1}^{\frac{p-1}{2}}2k}
+=g^{\frac{p-1}{2}\frac{p+1}{2}}
+=\left(-1\right)^\frac{p+1}{2}.\]
 
 \end{enumerate}
 \end{document}
