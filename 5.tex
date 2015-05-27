@@ -308,6 +308,20 @@ $b_2=q_1q_2\cdots q_l$ then
 \dlegendre{a}{q_1}\cdots\dlegendre{a}{q_l}
 =\dlegendre{a}{b_1}\dlegendre{a}{b_2}.\]
 
+Suppose $r_1,r_2,\ldots,r_k$ are odd integers. Then
+\begin{align*}
+\frac{r_1r_2\cdots r_k-1}{2}
+&\equiv\frac{r_1r_2\cdots r_{k-1}-1}{2}+\frac{r_k-1}{2}\\
+&\equiv\sum_{j=1}^{k-1}\frac{r_j-1}{2}+\frac{r_k-1}{2}\\
+&\equiv\sum_{j=1}^k\frac{r_j-1}{2}\pmod{2}
+\end{align*}
+by induction. Similarly
+\begin{align*}
+\frac{r_1^2r_2^2\cdots r_k^2-1}{8}
+&\equiv\frac{r_1^2r_2^2\cdots r_{k-1}^2-1}{8}+\frac{r_k^2-1}{8}\\
+&\equiv\sum_{j=1}^{k-1}\frac{r_j^2-1}{8}+\frac{r_k^2-1}{8}\\
+&\equiv\sum_{j=1}^k\frac{r_j^2-1}{8}\pmod{2}.
+\end{align*}
 
 \end{enumerate}
 \end{document}
