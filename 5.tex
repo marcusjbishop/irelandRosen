@@ -324,6 +324,20 @@ by induction. Similarly
 \end{align*}
 
 \item %18
+The prime factorization of $D$ is $p_1p_2\cdots p_k$
+where $p_1,p_2,\ldots,p_k$ are distinct, odd primes. 
+Modulo any prime half the units are residues and the other
+half are nonresidues, so we can choose integers $a_1,a_2,\ldots,a_k$
+with $\dlegendre{a_i}{p_i}=1$ for all $1\le i\le k-1$ and
+$\dlegendre{a_k}{p_k}=-1$. By the Chineese Remainder Theorem
+the system 
+\[\left\{b\equiv a_i\pmod{p_i}\left|1\le i\le k\rule{0pt}{11pt}\right.\right\}\]
+has a solution $b$. Then
+\[\dlegendre{b}{D}=\dlegendre{b}{p_1}\cdots\dlegendre{b}{p_k}
+=\dlegendre{a_1}{p_1}\cdots\dlegendre{a_k}{p_k}=-1.\]
+Note that $0\not\equiv\pm 1\equiv a_i\equiv b\pmod{p_i}$ for all $1\le i\le k$
+so that $\left(b,D\right)=1$.
+
 \item %19
 \item %20
 \item %21
