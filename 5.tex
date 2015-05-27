@@ -187,6 +187,20 @@ The residues are simply the even powers of $g$, so
 =\left(-1\right)^\frac{p+1}{2}.\]
 
 \item %11
+Since $p\equiv 3\pmod{4}$ it follows that
+$q=2p+1\equiv 7\pmod{8}$. This means that
+$2=b^2\pmod{q}$ for some $b\in\mathbb{Z}$
+by Quadratic Reciprocity. Then
+\begin{equation}\label{FermatFactorization}
+2^p-1\equiv b^{2p}-1=\left(b^p-1\right)\left(b^p+1\right)
+=\left(b^{\frac{q-1}{2}}-1\right)\left(b^{\frac{q-1}{2}}+1\right)
+\pmod{q}.
+\end{equation}
+But $b^{q-1}\equiv 1\pmod{q}$ by Fermat's Little Theorem
+so that $b^{\frac{q-1}{2}}\equiv\pm 1\pmod{q}$.
+Then \autoref{FermatFactorization} shows that $q$ divides $2^p-1$,
+so $2^p-1$ is not prime.
+
 \item %12
 Naturally $2$ divides $x^2+1$ since $2\mid\left(n^2+1\right)$
 for any odd $n$. Suppose otherwise that $p$ is an odd prime. Then
@@ -202,7 +216,34 @@ $\dlegendre{2}{p}=1$ if and only if $p\equiv 1,7\pmod{8}$.
 
 \item %13
 \item %14
+Assuming $p\equiv 1\pmod{3}$ the order of
+$U\left(\mathbb{Z}/p\mathbb{Z}\right)$ is divisible by $3$.
+This group being cyclic, it has an element $\rho$ of order $3$.
+Then $\left(2\rho+1\right)^2=4\rho^2+4\rho+1
+=4\left(\rho^2+\rho+1\right)-3\equiv -3\pmod{p}$
+since $\rho^2+\rho+1=\frac{1-\rho^3}{1-\rho}\equiv 0$.
+
 \item %15
+Assuming $p\equiv 1\pmod{5}$ the order of
+$U\left(\mathbb{Z}/p\mathbb{Z}\right)$ is divisible by $5$.
+This group being cyclic, it has an element $\rho$ of order $5$.
+Putting $y=\rho^4+\rho$ we see that
+\begin{equation}\label{RhoDependence}
+y^2+y-1=\rho^8+2\rho^5+\rho^2+\rho^4+\rho-1
+=\rho^4+\rho^3+\rho^2+\rho+1\equiv 0\pmod{p}.
+\end{equation}
+This means that
+\[\left(2y+1\right)^2=4y^2+4y+1=4\left(y^2+y\right)+1
+\equiv 4\left(1\right)+1=5\pmod{p}\]
+so that $\dlegendre{5}{p}=1$.
+We remark that we stumbled upon the polynomial $2y+1$
+as follows. On the one hand \autoref{RhoDependence}
+shows that $\rho^4+\rho$ is a zero
+of $y^2+y-1$. But on the other hand
+$y=\frac{-1\pm\sqrt{5}}{2}$ by the quadratic formula.
+This means that $5$ is a square, and moreover
+$\sqrt{5}=\pm\left(2y+1\right)$.
+
 \item %16
 $\tlegendre{7}{p}=1$ if and only if $p\equiv\pm b^2\pmod{28}$
 for an odd integer $b$ prime to $7$. Since
@@ -245,6 +286,27 @@ The solution $k\equiv 3\pmod{5}$ leads to $p=43\pmod{60}$.
 \end{itemize}
 In summary, we have $\dlegendre{15}{p}$ if $p\equiv
 1,7,11,17,43,49,53,59\pmod{60}$.
+
+\item %17
+Suppose $b=p_1p_2\cdots p_k$. If $a_1\equiv a_2\pmod{b}$
+then $a_1\equiv a_2\pmod{p_i}$ for all $1\le i\le k$ and
+\[\dlegendre{a_1}{b}
+=\dlegendre{a_1}{p_1}\cdots\dlegendre{a_1}{p_k}
+=\dlegendre{a_2}{p_1}\cdots\dlegendre{a_2}{p_k}
+=\dlegendre{a_2}{b}.\]
+Now for any $a_1,a_2$
+\[\dlegendre{a_1a_2}{b}
+=\dlegendre{a_1a_2}{p_1}\cdots\dlegendre{a_1a_2}{p_k}
+=\dlegendre{a_1}{p_1}\cdots\dlegendre{a_1}{p_k}
+\dlegendre{a_2}{p_1}\cdots\dlegendre{a_2}{p_k}
+=\dlegendre{a_1}{b}\dlegendre{a_2}{b}.\]
+Finally, if
+$b_1=p_1p_2\cdots p_k$ and
+$b_2=q_1q_2\cdots q_l$ then
+\[\dlegendre{a}{b_1b_2}
+=\dlegendre{a}{p_1}\cdots\dlegendre{a}{p_k}
+\dlegendre{a}{q_1}\cdots\dlegendre{a}{q_l}
+=\dlegendre{a}{b_1}\dlegendre{a}{b_2}.\]
 
 
 \end{enumerate}
