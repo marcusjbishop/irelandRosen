@@ -329,7 +329,7 @@ where $p_1,p_2,\ldots,p_k$ are distinct, odd primes.
 Modulo any prime half the units are residues and the other
 half are nonresidues, so we can choose integers $a_1,a_2,\ldots,a_k$
 with $\dlegendre{a_i}{p_i}=1$ for all $1\le i\le k-1$ and
-$\dlegendre{a_k}{p_k}=-1$. By the Chineese Remainder Theorem
+$\dlegendre{a_k}{p_k}=-1$. By the Chinese Remainder Theorem
 the system 
 \[\left\{b\equiv a_i\pmod{p_i}\left|1\le i\le k\rule{0pt}{11pt}\right.\right\}\]
 has a solution $b$. Then
@@ -339,6 +339,30 @@ Note that $0\not\equiv\pm 1\equiv a_i\equiv b\pmod{p_i}$ for all $1\le i\le k$
 so that $\left(b,D\right)=1$.
 
 \item %19
+The prime factorization of $D$ is $p_1p_2\cdots p_k$
+where $p_1,p_2,\ldots,p_k$ are distinct, odd primes. 
+For each $1\le i\le k$ let $b^{+1}_1,b^{+1}_2,\ldots,
+b^{+1}_{\frac{p_i-1}{2}},
+b^{-1}_1,b^{-1}_2,\ldots,b^{-1}_{\frac{p_i-1}{2}}$ be
+integers such that $\dlegendre{b^+_j}{p_i}=1$ and
+$\dlegendre{b^-_j}{p_i}=-1$ for all
+$1\le j\le\frac{p_i-1}{2}$.
+For each $\epsilon\in\left(\epsilon_1,\epsilon_2,\ldots,\epsilon_k\right)
+\in\left\{1,-1\right\}^k$
+and each $a=\left(a_1,a_2,\ldots,a_k\right)
+\in\prod_{i=1}^k\left\{b_1^{\epsilon_1},b_2^{\epsilon_2},
+\ldots b_k^{\epsilon_k}\right\}$ there is exactly one solution
+$1\le b^{a,\epsilon}\le D-1$ to the system
+$\left\{x\equiv a_i\pmod{p_i}\left|
+1\le i\le k\rule{0pt}{11pt}\right.\right\}$.
+Note that $\dlegendre{b^{a,\epsilon}}{D}
+=\epsilon_1\epsilon_2\cdots\epsilon_k$
+and that $b^{a,\epsilon}$ ranges over a reduced residue system $\pmod{D}$
+as $\epsilon$ and $a$ range over all tuples.
+Now since $\epsilon_1\epsilon_2\cdots\epsilon_k$
+equals $+1$ for half the tuples $\epsilon$ and $-1$ for the other half,
+it follows that $\sum\dlegendre{b^{a,\epsilon}}{D}=0$.
+
 \item %20
 \item %21
 
