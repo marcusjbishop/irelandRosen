@@ -9,3 +9,23 @@ def squareModP(p): # primes for which p is a residue/nonresidue
   m=pr[0].modulus()
   pn=[Mod(k,m) for k in [1..m-1] if not k in pr and 0!=k%p and 1==gcd(k,m)]
   return pr,pn
+
+def squareModPQ(p,q): # primes for which pq is a residue
+  pr,pn=squareModP(p)
+  qr,qn=squareModP(q)
+  m=pr[0].modulus()
+  n=qr[0].modulus()
+  d=gcd(m,n)
+  L=[]
+  L.extend(CartesianProduct(pr,qr))
+  L.extend(CartesianProduct(pn,qn))
+  M=[]
+  for a,b in L:
+    a=ZZ(a)
+    b=ZZ(b)
+    if (a-b)%d!=0:
+      continue
+    l=crt([a,b],[m,n])
+    M.append(Mod(l,m*n))
+  M.sort()
+  return M
