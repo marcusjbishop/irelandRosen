@@ -393,6 +393,8 @@ Then $\tlegendre{p}{D}=\tlegendre{a_i}{D}=1$
 so that $\tlegendre{D}{p}=1$ by \autoref{DPRecriprocity}.
 
 \item %21
+$1,4,5,16,17,20$ are the integers $b$ with $1\le b<21$,
+$\left(b,21\right)=1$, and $\tlegendre{b}{21}$.
 
 \item %22
 Since $113\equiv 1\pmod{4}$ we have
@@ -419,6 +421,18 @@ We calculate $\dlegendre{5}{761}=\dlegendre{761}{5}=\dlegendre{1}{5}=1$ and
 so that $\dlegendre{215}{761}=-1$.
 
 Two exercises remain\dots
+
+\item %23
+Since $p\equiv 1\pmod{4}$ we know that $\tlegendre{-1}{p}=1$.
+This means that $-1\equiv s^2\pmod{p}$ for some integer $s$,
+or equivalently, $s^2+1=tp$ for some integers $s,t$.
+Note that $s^2+1$ factors as $\left(s+i\right)\left(s-i\right)$
+in $\mathbb{Z}\left[i\right]$. Now if $p$ divided $s\pm i$
+then there would be integers $a,b$
+such that $s\pm i=p\left(a+bi\right)=pa+pbi$.
+But this is impossible since $pb\ne\pm 1$ for any integer $b$.
+This shows that $p$ divides $s^2+1$ but not $s+i$ or $s-i$. We conclude
+that $p$ is not prime in $\mathbb{Z}\left[i\right]$.
 
 \end{enumerate}
 \end{document}
