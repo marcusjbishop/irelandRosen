@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{multicol,graphicx}
+\usepackage[colorlinks,breaklinks,linkcolor=red,citecolor=blue]
+{hyperref} 
+\def\sectionautorefname~#1\null{\S#1\null}
+\usepackage{charter,amsmath,amssymb,breakurl}
+\def\equationautorefname~#1\null{(#1)\null}
+\def\itemautorefname~#1\null{(#1)\null}
+\usepackage{eulervm}
+\usepackage[letterpaper,margin=.75in]{geometry}
+\renewcommand{\pmod}[1]{\left(\mathsf{mod}\;#1\right)}
+\title{Chapter 6}
+\renewcommand{\theenumi}{6.\arabic{enumi}}
+\author{}\date{}
+\let\ord\relax\DeclareMathOperator{\ord}{\mathsf{ord}}
+\let\ln\relax\DeclareMathOperator{\ln}{\mathsf{ln}}
+\let\deg\relax\DeclareMathOperator{\deg}{\mathsf{deg}}
+\let\sin\relax\DeclareMathOperator{\sin}{\mathsf{sin}}
+\let\arctan\relax\DeclareMathOperator{\arctan}{\mathsf{arctan}}
+\let\cos\relax\DeclareMathOperator{\cos}{\mathsf{cos}}
+\let\sec\relax\DeclareMathOperator{\sec}{\mathsf{sec}}
+\let\min\relax\DeclareMathOperator*{\min}{\mathsf{min}}
+\let\max\relax\DeclareMathOperator*{\max}{\mathsf{max}}
+\let\sup\relax\DeclareMathOperator*{\sup}{\mathsf{sup}}
+\let\inf\relax\DeclareMathOperator*{\inf}{\mathsf{inf}}
+\let\lim\relax\DeclareMathOperator*{\lim}{\mathsf{lim}}
+\everymath{\displaystyle}
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+\item %1
+Write $\alpha=\sqrt{2}+\sqrt{3}$.
+We calculate $\alpha^2=5+2\sqrt{6}$
+and $\alpha^4=49+10\sqrt{6}$.
+It follows that $\alpha$ is a root of
+$x^4-10x^2+1$, so $\alpha$ is an algebraic integer.
+
+\item %2
+Clearing the fractions of the minimal polynomial of $\alpha$
+and evaluating at $\alpha$ results in
+\[0=a_n\alpha^n+a_{n-1}\alpha^{n-1}+\cdots+a_0.\]
+Multiplying by $a_n^{n-1}$ gives
+\begin{align*}
+0&=a_n^n\alpha^n+a_{n-1}a_n^{n-1}\alpha^{n-1}
++a_{n-2}a_n^{n-1}\alpha^{n-2}+\cdots+a_0a_n^{n-1}\\
+&=\left(a_n\alpha\right)^n
++a_{n-1}\left(a_n\alpha\right)^{n-1}
++a_{n-2}a_n\left(a_n\alpha\right)^{n-2}
++\cdots+a_0a_n^{n-1}.
+\end{align*}
+This shows that $a_n\alpha$ is a root of the monic polynomial
+\[x^n+a_{n-1}x^{n-1}+a_{n-2}a_nx^{n-2}+\cdots+a_0a_n^{n-1}.\]
+
+\end{enumerate}
+\end{document}

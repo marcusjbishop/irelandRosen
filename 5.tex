@@ -422,7 +422,7 @@ so that $\dlegendre{215}{761}=-1$.
 
 Two exercises remain\dots
 
-\item %23
+\item\label{NotPrime} %23
 Since $p\equiv 1\pmod{4}$ we know that $\tlegendre{-1}{p}=1$.
 This means that $-1\equiv s^2\pmod{p}$ for some integer $s$,
 or equivalently, $s^2+1=tp$ for some integers $s,t$.
@@ -433,6 +433,15 @@ such that $s\pm i=p\left(a+bi\right)=pa+pbi$.
 But this is impossible since $pb\ne\pm 1$ for any integer $b$.
 This shows that $p$ divides $s^2+1$ but not $s+i$ or $s-i$. We conclude
 that $p$ is not prime in $\mathbb{Z}\left[i\right]$.
+
+\item A prime $p\in\mathbb{Z}$ with $p\equiv 1\pmod{4}$ is not
+prime in $\mathbb{Z}\left[i\right]$ by \autoref{NotPrime}.
+Thus $p=\alpha\beta$ for some nonunits
+$\alpha=a+bi,\beta=c+di
+\in\mathbb{Z}\left[i\right]$.
+Then \[p^2=\left|\alpha\beta\right|^2
+=\left|ac-bd+i\left(ad+bc\right)\right|^2
+=\left(ac-bd\right)^2+\left(ad+bc\right)^2.\]
 
 \end{enumerate}
 \end{document}
