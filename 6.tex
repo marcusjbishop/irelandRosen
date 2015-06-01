@@ -37,20 +37,18 @@ It follows that $\alpha$ is a root of
 $x^4-10x^2+1$, so $\alpha$ is an algebraic integer.
 
 \item %2
-Clearing the fractions of the minimal polynomial of $\alpha$
-and evaluating at $\alpha$ results in
-\[0=a_n\alpha^n+a_{n-1}\alpha^{n-1}+\cdots+a_0.\]
-Multiplying by $a_n^{n-1}$ gives
-\begin{align*}
-0&=a_n^n\alpha^n+a_{n-1}a_n^{n-1}\alpha^{n-1}
-+a_{n-2}a_n^{n-1}\alpha^{n-2}+\cdots+a_0a_n^{n-1}\\
-&=\left(a_n\alpha\right)^n
-+a_{n-1}\left(a_n\alpha\right)^{n-1}
-+a_{n-2}a_n\left(a_n\alpha\right)^{n-2}
-+\cdots+a_0a_n^{n-1}.
-\end{align*}
-This shows that $a_n\alpha$ is a root of the monic polynomial
-\[x^n+a_{n-1}x^{n-1}+a_{n-2}a_nx^{n-2}+\cdots+a_0a_n^{n-1}.\]
+Suppose
+$x^n+a_{n-1}x^{n-1}+\cdots+a_0$ is the
+minimal polynomial of $\alpha$.
+Evaluating at $x=\alpha$ and multiplying by $d^n$
+where $d$ is a common multiple of the denominators
+of $a_0,a_1,\ldots,a_{n-1}$ gives
+\[0=d^n\alpha^n+a_{n-1}\alpha^{n-1}d^n+\cdots+a_0d^n
+=\left(d\alpha\right)^n+a_{n-1}d\left(d\alpha\right)^{n-1}
++\cdots+a_0d^n.\]
+This shows that $d\alpha$ is a root of the monic polynomial
+$x^n+a_{n-1}dx^{n-1}+\cdots+a_0d^n$
+so that $d\alpha$ is an algebraic integer.
 
 \end{enumerate}
 \end{document}
