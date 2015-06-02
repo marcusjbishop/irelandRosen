@@ -50,5 +50,21 @@ This shows that $d\alpha$ is a root of the monic polynomial
 $x^n+a_{n-1}dx^{n-1}+\cdots+a_0d^n$
 so that $d\alpha$ is an algebraic integer.
 
+\item %3
+Let $V\subseteq\mathbb{C}$ be the $\mathbb{Q}$-linear span of
+\begin{equation}\label{Dependence}
+\left\{\alpha^i\beta^j x^k\mid 0\le i<m,0\le j<n,0\le k<2\right\}
+\end{equation}
+where $m=\det{\alpha}$ and $n=\deg{\beta}$.
+We need to check that $x\left(\alpha^i\beta^j x^k\right)$ lies in $V$
+where $i,j,k$ lie in the ranges shown in \autoref{Dependence}.
+If $k=0$ then $\alpha^i\beta^j x$ is one of the monomials in
+\autoref{Dependence} However, if $k=1$ then we write
+\[\alpha^i\beta^j x^2=\alpha^i\beta^j\left(-\alpha x-\beta\right)
+=-\alpha^{i+1}\beta^jx-\alpha^i\beta^{j+1}x.\]
+Now if either $m=i+1$ or $n=j+1$ then we use the minimal polynomials
+of $\alpha$ or $\beta$ in the same way to write
+$\alpha^i\beta^jx^2$ as a linear combination of elements of
+\autoref{Dependence}.
 \end{enumerate}
 \end{document}
