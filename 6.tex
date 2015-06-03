@@ -71,16 +71,35 @@ $\alpha^i\beta^jx^2$ as a linear combination of elements of
 Suppose that $f\left(x\right)=a_mx^m+a_{m-1}x^{m-1}+\cdots+a_0$
 and $g\left(x\right)=b_nx^n+b_{n-1}x^{n-1}+\cdots+b_0$
 are primitive polynomials and let $p$ be any prime.
+By minimality of $f$ the set of coefficients of $f$ not divisisble by $p$
+is nonempty, and similarly for $g$.
 Let $i$ be minimal such that $p\nmid a_i$ and let
 $j$ be minimal such that $p\nmid b_j$.
 Then the coefficient of $x^{i+j}$ in $f\left(x\right)g\left(x\right)$
 is $a_ib_j$ plus other terms $a_kb_l$ with either $k<i$ or $l<j$.
 But if $k<i$ or $l<j$ then $p$ divides $a_kb_l$ by minimality
-of $i$ and $j$. So $p$ divides all the terms of the coefficient
-except $a_ib_j$. We conclude that $p$ does {\em not} divide the coefficient.
+of $i$ and $j$. So $p$ divides all the terms of the coefficient of $x^{i+j}$
+except $a_ib_j$. We conclude that $p$ does {\em not} divide this coefficient.
 This means that the coefficients of $f\left(x\right)g\left(x\right)$
 are relatively prime, for if not, then there would be a prime $p$
-dividing all of them.
+dividing them all.
+
+\item %5
+Since $\alpha$ is an algebraic integer there exists
+a monic polynomial $g\left(x\right)\in\mathbb{Z}\left[x\right]$
+with $g\left(\alpha\right)=0$.
+The monic polynomial $f\left(x\right)\in\mathbb{Q}\left[x\right]$
+of {\em minimal} degree such that $f\left(x\right)=0$ might fail to
+have integer coefficients. Let $d$ be the least common multiple
+of the denominators of the coefficients of $f$. Then
+$df\left(x\right)\in\mathbb{Z}\left[x\right]$.
+Then $df\left(x\right)$ divides $g\left(x\right)$
+so there exists $h\left(x\right)\in\mathbb{Z}\left[x\right]$
+such that $df\left(x\right)h\left(x\right)=g\left(x\right)$.
+But $d$ divides the leading coefficient of $df\left(x\right)h\left(x\right)$
+while the leading coefficient of $g\left(x\right)h\left(x\right)$
+is $1$. It follows that $d=1$ so that
+$f\left(x\right)\in\mathbb{Z}\left[x\right]$.
 
 \end{enumerate}
 \end{document}
