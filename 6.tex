@@ -66,5 +66,21 @@ Now if either $m=i+1$ or $n=j+1$ then we use the minimal polynomials
 of $\alpha$ or $\beta$ in the same way to write
 $\alpha^i\beta^jx^2$ as a linear combination of elements of
 \autoref{Dependence}.
+
+\item %4
+Suppose that $f\left(x\right)=a_mx^m+a_{m-1}x^{m-1}+\cdots+a_0$
+and $g\left(x\right)=b_nx^n+b_{n-1}x^{n-1}+\cdots+b_0$
+are primitive polynomials and let $p$ be any prime.
+Let $i$ be minimal such that $p\nmid a_i$ and let
+$j$ be minimal such that $p\nmid b_j$.
+Then the coefficient of $x^{i+j}$ in $f\left(x\right)g\left(x\right)$
+is $a_ib_j$ plus other terms $a_kb_l$ with either $k<i$ or $l<j$.
+But if $k<i$ or $l<j$ then $p$ divides $a_kb_l$ by minimality
+of $i$ and $j$. So $p$ divides all the terms of the coefficient
+except $a_ib_j$. We conclude that $p$ does {\em not} divide the coefficient.
+This means that the coefficients of $f\left(x\right)g\left(x\right)$
+are relatively prime, for if not, then there would be a prime $p$
+dividing all of them.
+
 \end{enumerate}
 \end{document}
