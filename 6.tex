@@ -260,6 +260,23 @@ along with the $k=0$ term. This gives
 =\sum_{k=0}^{p-1}\zeta^{k^2}.\]
 We conclude that $g=\sum_{k=0}^{p-1}\zeta^{k^2}$.
 
+\item %11
+We observe that for any $k$
+\[\zeta^{-k}=\cos\left(\frac{2\pi i\left(-k\right)}{p}\right)
++i\sin\left(\frac{2\pi i\left(-k\right)}{p}\right)
+=\cos\left(\frac{2\pi ik}{p}\right)-i\sin\left(\frac{2\pi ik}{p}\right)
+=\overline{\zeta^k}.\]
+It follows that
+\[\overline{\psi_a\left(t\right)}
+=\overline{\zeta^{at}}=\zeta^{-at}\]
+which equals both $\psi_a\left(-t\right)$ and $\psi_{-a}\left(t\right)$.
+\\
+If $t\equiv s\pmod{p}$ then
+\[\frac{1}{p}\sum_{k=0}^{p-1}\psi_a\left(t-s\right)
+=\frac{1}{p}\sum_{k=0}^{p-1}\zeta^0=1\]
+but if $t\not\equiv s$ then
+\[\frac{1}{p}\sum_{k=0}^{p-1}\psi_a\left(t-s\right)
+=\frac{1}{p}\sum_{k=0}^{p-1}\zeta^{a\left(t-s\right)}=0.\]
 
 \end{enumerate}
 \end{document}
