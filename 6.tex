@@ -241,5 +241,25 @@ If $p=5$ and $\zeta=e^{\frac{2\pi i}{p}}$ we have
 $g=\zeta-\zeta^2-\zeta^3+\zeta^4$. We confirm that
 $g^2=5=\left(-1\right)^{\frac{p-1}{2}}5.$
 
+\item %10
+$\sum_{a=1}^{p-1}g_a=\sum_{a=1}^{p-1}
+\tlegendre{a}{p}g=g\sum_{a=1}^{p=1}\tlegendre{a}{p}=0$.
+
+\item %11
+On one hand $\sum_{k=0}^{p-1}\left(1+\tlegendre{k}{p}\right)\zeta^k
+=\sum_{k=0}^{p-1}\zeta^k
++\sum_{k=0}^{p-1}\tlegendre{k}{p}\zeta^k=0+g=g$.
+But on the other hand
+$1+\tlegendre{k}{p}=0$ when $k$ is a nonresidue,
+so the sum can be taken instead over
+the residues $\left\{k^2\mid 1\le k\le\frac{p-1}{2}\right\}$
+along with the $k=0$ term. This gives
+\[\sum_{k=0}^{k-1}\left(1+\tlegendre{k}{p}\right)\zeta^k
+=1+\sum_{k=1}^{\frac{p-1}{2}}2\zeta^{k^2}
+=1+\sum_{k=1}^{p-1}\zeta^{k^2}
+=\sum_{k=0}^{p-1}\zeta^{k^2}.\]
+We conclude that $g=\sum_{k=0}^{p-1}\zeta^{k^2}$.
+
+
 \end{enumerate}
 \end{document}
