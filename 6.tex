@@ -260,7 +260,7 @@ along with the $k=0$ term. This gives
 =\sum_{k=0}^{p-1}\zeta^{k^2}.\]
 We conclude that $g=\sum_{k=0}^{p-1}\zeta^{k^2}$.
 
-\item %11
+\item %12
 We observe that for any $k$
 \[\zeta^{-k}=\cos\left(\frac{2\pi i\left(-k\right)}{p}\right)
 +i\sin\left(\frac{2\pi i\left(-k\right)}{p}\right)
@@ -272,11 +272,26 @@ It follows that
 which equals both $\psi_a\left(-t\right)$ and $\psi_{-a}\left(t\right)$.
 \\
 If $t\equiv s\pmod{p}$ then
-\[\frac{1}{p}\sum_{k=0}^{p-1}\psi_a\left(t-s\right)
-=\frac{1}{p}\sum_{k=0}^{p-1}\zeta^0=1\]
+\[\frac{1}{p}\sum_a\psi_a\left(t-s\right)
+=\frac{1}{p}\sum_a\zeta^0=1\]
 but if $t\not\equiv s$ then
-\[\frac{1}{p}\sum_{k=0}^{p-1}\psi_a\left(t-s\right)
-=\frac{1}{p}\sum_{k=0}^{p-1}\zeta^{a\left(t-s\right)}=0.\]
+\[\frac{1}{p}\sum_a\psi_a\left(t-s\right)
+=\frac{1}{p}\sum_a\zeta^{a\left(t-s\right)}
+=\frac{1}{p}\sum_a\zeta^a=0.\]
+
+\item %13
+\begin{align*}
+\sum_a\widehat{f}\left(a\right)\psi_a\left(t\right)
+&=\frac{1}{p}\sum_a\sum_sf\left(s\right)
+\psi_{-a}\left(s\right)\psi_a\left(t\right)\\
+&=\frac{1}{p}\sum_a\sum_sf\left(s\right)
+\zeta^{-as}\zeta^{at}\\
+&=\frac{1}{p}\sum_a\sum_sf\left(s\right)\zeta^{a\left(t-s\right)}\\
+&=\frac{1}{p}\sum_a\sum_sf\left(s\right)\psi_a\left(t-s\right)\\
+&=\frac{1}{p}\sum_s f\left(s\right)\sum_a\psi_a\left(t-s\right)\\
+&=\sum_s f\left(s\right)\delta\left(s,t\right)\\
+&=f\left(t\right)
+\end{align*}
 
 \end{enumerate}
 \end{document}
