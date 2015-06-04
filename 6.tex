@@ -25,6 +25,29 @@
 \let\inf\relax\DeclareMathOperator*{\inf}{\mathsf{inf}}
 \let\lim\relax\DeclareMathOperator*{\lim}{\mathsf{lim}}
 \everymath{\displaystyle}
+
+\makeatletter
+\def\legendre@dash#1#2{\hb@xt@#1{%
+  \kern-#2\p@
+  \cleaders\hbox{\kern.5\p@
+    \vrule\@height.2\p@\@depth.2\p@\@width\p@
+    \kern.5\p@}\hfil
+  \kern-#2\p@
+  }}
+\def\@legendre#1#2#3#4#5{\mathopen{}\left(
+  \sbox\z@{$\genfrac{}{}{0pt}{#1}{#3#4}{#3#5}$}%
+  \dimen@=\wd\z@
+  \kern-\p@\vcenter{\box0}\kern-\dimen@\vcenter{\legendre@dash\dimen@{#2}}\kern-\p@
+  \right)\mathclose{}}
+\newcommand\legendre[2]{\mathchoice
+  {\@legendre{0}{1}{}{#1}{#2}}
+  {\@legendre{1}{.5}{\vphantom{1}}{#1}{#2}}
+  {\@legendre{2}{0}{\vphantom{1}}{#1}{#2}}
+  {\@legendre{3}{0}{\vphantom{1}}{#1}{#2}}
+}
+\def\dlegendre{\@legendre{0}{1}{}}
+\def\tlegendre{\@legendre{1}{0.5}{\vphantom{1}}}
+\makeatother
 \begin{document}
 \maketitle
 
@@ -71,7 +94,7 @@ $\alpha^i\beta^jx^2$ as a linear combination of elements of
 Suppose that $f\left(x\right)=a_mx^m+a_{m-1}x^{m-1}+\cdots+a_0$
 and $g\left(x\right)=b_nx^n+b_{n-1}x^{n-1}+\cdots+b_0$
 are primitive polynomials and let $p$ be any prime.
-By minimality of $f$ the set of coefficients of $f$ not divisisble by $p$
+By minimality of $f$ the set of coefficients of $f$ not divisible by $p$
 is nonempty, and similarly for $g$.
 Let $i$ be minimal such that $p\nmid a_i$ and let
 $j$ be minimal such that $p\nmid b_j$.
@@ -179,6 +202,44 @@ gives $m^2\equiv a^2$. We conclude that $m,a$ are either
 both even or both odd. In both cases
 $\alpha=\frac{-m\pm a}{2}\in\mathbb{Z}$ is of the required form.
 \end{enumerate}
+
+\item %8
+$\omega$ satisfies $x^3-1=\left(x-1\right)\left(x^2+x+1\right)$
+but since $\omega\ne 1$ we have $\omega^2+\omega+1=0$.
+Using this observation we see that $\left(2\omega+1\right)^2
+=4\omega^2+4\omega+1=-3$. So $\tau^2=-3$ where $\tau=2\omega+1$.
+Now if $p$ is any odd prime we have
+\[\tau^{p-1}=\left(\tau^2\right)^{\frac{p-1}{2}}
+=\left(-3\right)^{\frac{p-1}{2}}\equiv\dlegendre{-3}{p}
+\pmod{p}\]
+so that $\tau^p\equiv\tlegendre{-3}{p}\tau$.
+On the other hand $\tau^p=\left(2\omega+1\right)^p
+\equiv 2^p\omega^3+1$. Noting that $2^p=\left(1+1\right)^p\equiv 2$
+we can rewrite this as
+\[\tau^p\equiv\begin{cases}
+2\omega+1&p\equiv 1\\2\omega^2+1&p\equiv 2\\3&p\equiv 0
+\end{cases}\qquad
+\equiv\qquad\begin{cases}
+\tau&p\equiv 1\\-\tau&p\equiv 2\\0&p\equiv 0
+\end{cases}\qquad\pmod{p}\]
+where we have used the observation
+that $\left(2\omega+1\right)+\left(2\omega^2+1\right)=0$
+by the observation above, so $2\omega^2+1=-\left(2\omega+1\right)=-\tau$.
+Assembling we have
+\[\dlegendre{-3}{p}\qquad\equiv\qquad\begin{cases}
+1&p\equiv 1\\-1&p\equiv 2\\0&p\equiv 0
+\end{cases}\qquad\pmod{p}.\]
+
+\item %9
+If $p=3$ and $\zeta=e^{\frac{2\pi i}{p}}$ we have
+$g=\tlegendre{0}{3}+\tlegendre{1}{3}\zeta+\tlegendre{2}{3}\zeta^2
+=\zeta-\zeta^2$. Then
+\[g^2=\left(\zeta-\zeta^2\right)^2
+=\zeta^2-2\zeta^3+\zeta^4=\zeta+\zeta^2-2=-3
+=\left(-1\right)^{\frac{p-1}{2}}3.\]
+If $p=5$ and $\zeta=e^{\frac{2\pi i}{p}}$ we have
+$g=\zeta-\zeta^2-\zeta^3+\zeta^4$. We confirm that
+$g^2=5=\left(-1\right)^{\frac{p-1}{2}}5.$
 
 \end{enumerate}
 \end{document}
