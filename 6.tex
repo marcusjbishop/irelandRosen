@@ -302,6 +302,26 @@ If $f\left(t\right)=\tlegendre{t}{p}$ then
 
 \item %15
 \item %16
+Suppose $f\left(x\right)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0
+\in\mathbb{Q}\left[x\right]$ and note that
+\[f'\left(x\right)=na_nx^{n-1}+\left(n-1\right)a_{n-1}x^{n-2}
++\cdots+a_1\]
+is also in $\mathbb{Q}\left[x\right]$.
+However, $f\left(x\right)$ can be factored over $\mathbb{C}$
+as $f\left(x\right)=\prod_{i=1}^n\left(x-\alpha_i\right)$
+where $\alpha_1,\alpha_2,\ldots,\alpha_n$ are the
+roots of $f\left(x\right)$ in $\mathbb{C}$.
+By the product rule
+\begin{equation}\label{ProductRule}
+f'\left(x\right)=\sum_{i=1}^n\prod_{j\ne i}\left(x-\alpha_i\right).
+\end{equation}
+Now if $f\left(x\right)$ has a repeated root, say $\alpha_k$,
+then \autoref{ProductRule} shows that $\alpha_k$ will also be
+a root of $f'\left(x\right)$.
+Since $\deg{f'}=n-1<n=\deg{f}$ we know that $f'\left(x\right)$
+divides $f\left(x\right)$. But this is impossible
+since $\deg{f'}=n-1$ and $f\left(x\right)$ is irreducible.
+
 \item %17
 $\sqrt[3]{2}$ is a root $x^3-2$. It remains to
 show that $x^3-2$ is irreducible over $\mathbb{Q}$.
@@ -322,5 +342,37 @@ integer of degree $p-1$.
 Since there exist infinitely many primes,
 it follows that there exist algebraic integers of arbitrary
 high degree.
+
+\item 19
+Let $\zeta=e^{\frac{2\pi i}{5}}$.
+By geometry we see that $\alpha=\cos\left(\frac{2\pi}{5}\right)
+=\frac{\zeta+\zeta^4}{2}$.
+We observe that $4\alpha^2=\zeta^2+2\zeta^5+\zeta^8
+=\zeta^3+\zeta^2+2$ so that
+\[4\alpha^2+2\alpha-1=\left(\zeta^3+\zeta^2+2\right)+
+\left(\zeta+\zeta^4\right)-1
+=\zeta^4+\zeta^3+\zeta^2+\zeta+1=0.\]
+Thus $\alpha$ is a root of $4x^2+2x-1$.
+By the same reasoning we find that $\beta=\frac{\zeta^2+\zeta^3}{2}$
+is a root of the same polynomial
+$4x^2+2x-1$.
+So $4x^2+2x-1$ has no rational roots and
+is hence irreducible over $\mathbb{Q}$. Thus $4x^2+2x-1$
+is the minimal polynomial of $\alpha$, so $\beta$ is the
+only conjugate of $\alpha$.
+
+\item %20
+Let $\alpha\in F$. Then the size of the set
+$\left\{1,\alpha,\alpha^2,\ldots,\alpha^n\right\}$
+exceeds the dimension of $F$, so there must exist
+$a_0,a_1,\ldots,a_n\in\mathbb{Q}$, not all zero,
+such that $0=a_n\alpha^n+a_{n-1}\alpha^{n-1}+\cdots+a_1\alpha+a_0$.
+This shows that $\alpha$ is an algebraic number of degree
+at most $n$.
+
+Another way to do this is to apply Proposition~6.1.2
+taking the $\mathbb{Q}$-module $V$ to be $F$ itself.
+Then $\alpha v\in F$ for any $v\in F$ since $F$ is a field.
+That $\deg\alpha\le n$ follows from the proof of Proposition~6.1.2.
 \end{enumerate}
 \end{document}
