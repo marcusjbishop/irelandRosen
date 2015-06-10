@@ -69,5 +69,52 @@ M\"obius inversion we have
 for any divisor $d$ of $q$.
 In particular $\psi\left(q\right)=\varphi\left(q\right)>1$
 unless $q=2$, in which case $H$ is clearly cyclic.
+
+\item %2
+\item\label{Number3} %3
+Since $q\equiv 1\pmod{n}$ we know that $q=nr+1$ for some $r\in\mathbb{Z}$.
+This means that $nr=q-1$ so that $n$ divides $q-1$.
+Let $\gamma$ be a generator of the cyclic group $F^\times$.
+Write $x=\gamma^y$ and $\alpha=\gamma^m$.
+Then $x^n=\alpha$ is solvable if and only if
+$\gamma^{ny}=\gamma^m$ is solvable
+if and only if $ny\equiv m\pmod{q-1}$ is solvable.
+The latter is solvable and has $\left(n,q-1\right)=n$
+solutions if and only if $n\mid m$. Otherwise it has no solutions.
+
+\item %4
+Let $E=\left\{\alpha\in F^\times
+\mid\text{$x^n=\alpha$ for some $x\in F$}\right\}$.
+If $\alpha,\beta\in E$ then $\alpha=y^n$ and $\beta=z^n$
+for some $y,z\in F$. Then $\alpha\beta^{-1}
+=\left(yz^{-1}\right)^n\in E$ shows that $E$ is a subgroup of $F^\times$.
+According to \autoref{Number3} $x^n=\alpha$ is solvable
+if $m$ is a multiple of $n$, where $m$ is such that $\alpha=\gamma^m$
+where $\gamma$ is the generator of $F^\times$.
+This means that $m$ can be any of
+\[n,2n,3n,\ldots,\frac{q-1}{n}n\]
+Thus $\left|E\right|=\frac{q-1}{n}$.
+
+\item %5
+Let $\delta$ be a generator of $K^\times$
+We can assume that $\gamma=\delta^e$ where
+\begin{equation}\label{Epsilon}
+e=\frac{\left|K^\times\right|}{\left|F^\times\right|}=\frac{q^n-1}{q-1}
+=1+q+\cdots+q^{n-1}
+\end{equation}
+Note also that $q\equiv 1\pmod{n}$ implies that $q^n\equiv 1\pmod{n}$.
+This together with \autoref{Epsilon} means that $e\equiv 0\pmod{n}$.
+Thus $e=ns$ for some $s\in\mathbb{Z}$. Together with \autoref{Epsilon}
+we have $q^n-1=e\left(q-1\right)=ns\left(q-1\right)$. This shows
+that $q^n-1$ is divisible by $n\left(q-1\right)$.
+
+Write $x=\delta^y$ and $\alpha=\gamma^m=\delta^{em}$.
+Then $x^n=\alpha$ is solvable if and only if
+$\delta^{yn}=\delta^{em}$ is solvable if and only if
+$yn\equiv em\pmod{q^n-1}$ is solvable.
+The latter has $\left(q^n-1,n\right)=n$ solutions since
+$em=\frac{m\left(q^n-1\right)}{q-1}$
+is divisible by $n$. Here we use the fact
+that $q^n-1$ is divisible by $n\left(q-1\right)$.
 \end{enumerate}
 \end{document}
