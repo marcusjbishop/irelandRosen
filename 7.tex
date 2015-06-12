@@ -116,5 +116,29 @@ The latter has $\left(q^n-1,n\right)=n$ solutions since
 $em=\frac{m\left(q^n-1\right)}{q-1}$
 is divisible by $n$. Here we use the fact
 that $q^n-1$ is divisible by $n\left(q-1\right)$.
+
+\item %6
+Let $q=\left|F\right|$ and let $\gamma$ be a generator
+of $F^\times$.  Write $x=\gamma^y$ and let
+$m\in\mathbb{Z}$ be such that $\alpha=\gamma^m$.
+That $x^2=\alpha$ has no solution $x\in F$ implies that
+$\gamma^{2y}=\gamma^{m}$ has no solution $y\in\mathbb{Z}$.
+This in turn implies that $2y\equiv m\pmod{q-1}$ has no solution $y$.
+This means that $d=\left(q-1,2\right)$ does not divide $m$.
+If $q$ were even, then $d$ would be $1$, which {\em does} divide $m$.
+This means that $q$ is odd and $d=2$.
+We remark that we have recovered the fact that all the
+elements of a field of characteristic~$2$ are squares.
+Since $d=2$ does not divide $m$, we also know that $m$ is odd.
+
+Now let $\delta$ be a generator of $K$
+and assume that $\gamma$ was chosen above such that $\gamma=\delta^e$
+where $e=\frac{q^3-1}{q-1}=q^2+q+1$.
+Then $x^2=\alpha$ has a solution $x\in K$
+if and only if $\delta^{2y}=\delta^{em}$ has a solution $y\in\mathbb{Z}$
+if and only if $2y\equiv 3m\pmod{q^3-1}$ has a solution $y\in\mathbb{Z}$.
+The latter holds if and only if $2=\left(q^3-1\right)$ divides $em$.
+This is not the case since $em$ is odd. We conclude that
+Then $x^2=\alpha$ has no solution $x\in K$.
 \end{enumerate}
 \end{document}
