@@ -129,7 +129,7 @@ If $q$ were even, then $d$ would be $1$, which {\em does} divide $m$.
 This means that $q$ is odd and $d=2$.
 We remark that we have recovered the fact that all the
 elements of a field of characteristic~$2$ are squares,
-a consequence of the more general fact that all the elements
+a special case of the fact that all the elements
 of a field of characteristic~$p$ are $p$th powers.
 Since $d=2$ does not divide $m$, we also know that $m$ is odd.
 
@@ -156,5 +156,48 @@ if and only if $n$ is even.
 \item %8
 As noted in \autoref{NotSquare} all the elements of
 a field of characteristic~2 are squares.
+
+\item %9
+Let $\gamma$ be a generator of $F^\times$
+and $\delta$ a generator of $K$.
+Assume also that $\gamma=\delta^e$
+where $e=\frac{q^d-1}{q-1}$ where $d=\left|K:F\right|$.
+Let $m\in\mathbb{Z}$ be such that $\alpha=\gamma^m$.
+That $\alpha=x^n$ has no solution in $F$ implies that
+$\gamma^m=\gamma^{ny}$ has no solution $y\in\mathbb{Z}$.
+In turn $m\equiv ny\pmod{q-1}$ has no solution $y\in\mathbb{Z}$
+implies that $\left(q-1,n\right)=n$ does not divide $m$.
+
+Now $\alpha=x^n$ has a solution in $K$ if and only if
+$\delta^{em}=\delta^{ny}$ has a solution $y\in\mathbb{Z}$
+if and only if $em\equiv ny\pmod{q^d-1}$
+has a solution $y\in\mathbb{Z}$
+if and only if $\left(q^d-1,n\right)=n$ divides $em$.
+This holds if and only if $em\equiv 0\pmod{n}$.
+Now $q\equiv 1\pmod{n}$ implies that
+\[e\equiv\left(q^{d-1}+q^{d-2}+\cdots+q+1\right)\equiv d\pmod{n}.\]
+But $d\not\equiv 0$ by the assumption
+that $\left(d,n\right)=1$ and $m\not\equiv 0$ by the observation
+above that $n$ does not divide $m$.
+We conclude that $em\not\equiv 0$ so that $\alpha=x^n$
+has no solution in $K$.
+
+\item %10
+Let $\gamma$ be a generator of $F^\times$
+and $\delta$ a generator of $K$.
+Assume also that $\gamma=\delta^e$
+where $e=\frac{q^2-1}{q-1}=q+1$.
+Let $\beta\in K$.
+If $\beta=0$ then naturally $\beta^{q+1}=0\in F$.
+If $\beta=\delta^m$ is any element of $K^\times$
+then $\beta^{q+1}=\delta^{\left(q+1\right)m}=\gamma^m\in F$.
+On the other hand, suppose $\alpha$ is any element of $F$.
+If $\alpha=0$ then $0^{q+1}=\alpha$.
+If $\alpha=\gamma^m\in F^\times$
+then $\beta^{q+1}=\alpha$ where $\beta=\delta^m$.
+
+\item %11
+
+
 \end{enumerate}
 \end{document}
