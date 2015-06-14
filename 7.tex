@@ -117,7 +117,7 @@ $em=\frac{m\left(q^n-1\right)}{q-1}$
 is divisible by $n$. Here we use the fact
 that $q^n-1$ is divisible by $n\left(q-1\right)$.
 
-\item %6
+\item\label{NotSquare} %6
 Let $q=\left|F\right|$ and let $\gamma$ be a generator
 of $F^\times$.  Write $x=\gamma^y$ and let
 $m\in\mathbb{Z}$ be such that $\alpha=\gamma^m$.
@@ -128,7 +128,9 @@ This means that $d=\left(q-1,2\right)$ does not divide $m$.
 If $q$ were even, then $d$ would be $1$, which {\em does} divide $m$.
 This means that $q$ is odd and $d=2$.
 We remark that we have recovered the fact that all the
-elements of a field of characteristic~$2$ are squares.
+elements of a field of characteristic~$2$ are squares,
+a consequence of the more general fact that all the elements
+of a field of characteristic~$p$ are $p$th powers.
 Since $d=2$ does not divide $m$, we also know that $m$ is odd.
 
 Now let $\delta$ be a generator of $K$
@@ -140,5 +142,19 @@ if and only if $2y\equiv 3m\pmod{q^3-1}$ has a solution $y\in\mathbb{Z}$.
 The latter holds if and only if $2=\left(q^3-1\right)$ divides $em$.
 This is not the case since $em$ is odd. We conclude that
 Then $x^2=\alpha$ has no solution $x\in K$.
+
+\item We repeat the argument in \autoref{NotSquare}
+except that $K$ is an extension of degree~$n$ rather than~$3$.
+This means that
+$e=\frac{q^3-1}{q-1}=q^{n-1}+q^{n-2}+\cdots+q+1$ has
+$n$~terms, all odd.
+So $e$ is even if and only if $n$ is even.
+Thus $em$ is even if and only
+if $n$ is even. Thus $2y\equiv nm\pmod{q^n-1}$ has a solution
+if and only if $n$ is even.
+
+\item %8
+As noted in \autoref{NotSquare} all the elements of
+a field of characteristic~2 are squares.
 \end{enumerate}
 \end{document}
