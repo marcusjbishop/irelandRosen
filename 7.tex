@@ -251,8 +251,18 @@ of powers of $p$ with coefficients $\pm 1$.
 Thus, there exist monic irredubile polynomials of degree~$n$
 over~$\mathbb{F}_q$ for any $n\ge 1$.
 
-
 \item %14
+Suppose that $K$ is an extension of $\mathbb{F}_q$ of degree $f$. Then
+$q^f\equiv 1\pmod{n}$ implies that $n$ divides $q^f-1$
+which in turn implies that $x^n-1$ divides $x^{q^f-1}-1$.
+Then since all the nonzero elements of $K$ satisfy $x^{q^n-1}-1$
+we see that $x^n-1$ splits completely in $K$.
+
+On the other hand, if $g\in\mathbb{N}$ is such that
+$x^n-1$ splits completely in an extension of $\mathbb{F}_q$
+of degree~$g$ then $x^n-1$ divides $x^{q^g-1}-1$
+which implies that $n$ divides $q^g-1$ which in turn implies
+that $q^g\equiv 1\pmod{n}$. Thus $g\ge f$.
 
 \end{enumerate}
 \end{document}
