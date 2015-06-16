@@ -197,7 +197,62 @@ If $\alpha=\gamma^m\in F^\times$
 then $\beta^{q+1}=\alpha$ where $\beta=\delta^m$.
 
 \item %11
+\item %12
+\item %13
+\item %14
+We first prove that
+\begin{equation}\label{Theorem2}
+x^{q^n}-x=\prod_{d\mid n}G_d\left(x\right)
+\end{equation}
+where $G_d\left(x\right)$ is the product
+of the monic irreducible polynomials of degree~$d$ over $\mathbb{F}_q$.
+First observe that $x^{q^n}-x$ is seperable, being
+relatively prime to its derivative $-1$. This means that if
+$f\left(x\right)$ is any irreducible factor of $x^{q^n}-x$
+then $\left(f\left(x\right)\right)^2$ is not a factor.
 
+Suppose that $f\left(x\right)$ is a monic irreducible polynomial
+of degree~$d$ over $\mathbb{F}_q$.
+Let $\alpha$ be a root of $f\left(x\right)$ and put
+$K=\mathbb{F}_q\left(\alpha\right)$. Then $\left|K:\mathbb{F}_q\right|=d$
+so that all the elements of $K$ satisfy $x^{q^d}-x$.
+We will show that $f\left(x\right)$ divides $x^{q^n}-x$
+if and only if $d\mid n$.
+
+Suppose that $f\left(x\right)$ divides $x^{q^n}-x$.
+Then $x^{q^n}-x=f\left(x\right)g\left(x\right)$.
+Substituting $x=\alpha$ shows that $\alpha^{q^n}=\alpha$.
+Now if $\beta=\sum_{i=0}^{d-1}b_i\alpha^i$ is any element
+of~$K$ with $b_0,b_1,\ldots,b_{d-1}\in\mathbb{F}_q$ then
+\[\beta^{q^n}=\left(\sum_{i=0}^{d-1}b_i\alpha^i\right)^{q^n}
+=\sum_{i=0}^{d-1}b_i\left(\alpha^{q^n}\right)^i
+=\sum_{i=0}^{d-1}b_i\alpha=\beta\]
+shows that all the elements of $K$ satisfy $x^{q^n}-x$.
+This means that $x^{q^d}-x$ divides $x^{q^n}-x$ so that $d\mid n$.
+
+Conversely, suppose that $d\mid n$. This means that $x^{q^d}-x$
+divides $x^{q^n}-x$. Now since $\alpha$ satisifes $x^{q^d}-x$
+and $f\left(x\right)$ is the minimal polynomial of $\alpha$
+we know that $f\left(x\right)$ divides $x^{q^d}-x$ which in
+turn divides $x^{q^d}-x$. This shows that $f\left(x\right)$
+divies $x^{q^n}-x$ and proves \autoref{Theorem2}.
+
+Taking degrees of both sides of \autoref{Theorem2} gives
+\[p^n=\sum_{d\mid n}dN_d\]
+where $N_d$ is the number of monic irreducible polynomials
+of degree~$d$ over~$\mathbb{F}_q$.
+By M\"obius inversion we have
+\begin{equation}\label{Mobius}
+nN_n=\sum_{d\mid n}\mu\left(\frac{n}{d}\right)p^d.
+\end{equation}
+We conclude that $N_n\ne 0$ for any $n\ge 1$ since
+the right hand side of \autoref{Mobius} is a sum
+of powers of $p$ with coefficients $\pm 1$.
+Thus, there exist monic irredubile polynomials of degree~$n$
+over~$\mathbb{F}_q$ for any $n\ge 1$.
+
+
+\item %14
 
 \end{enumerate}
 \end{document}
