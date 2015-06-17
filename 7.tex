@@ -264,7 +264,7 @@ of degree~$g$ then $x^n-1$ divides $x^{q^g-1}-1$
 which implies that $n$ divides $q^g-1$ which in turn implies
 that $q^g\equiv 1\pmod{n}$. Thus $g\ge f$.
 
-\item %15
+\item %16
 Multiplying all the polynomials of degree~$3$ by all the polynomials
 of degree~$1$ and multiplying all the polynomials of degree~$2$
 by all the polynomials of degree~$2$
@@ -272,9 +272,30 @@ produces all the reducible polynomials of degree~$4$.
 The polynomials of degree~$4$ not listed above are
 $x^4+x+1$, $x^4+x^3+1$, and $x^4+x^3+x^2+x+1$.
 
-\item %16
+\item %17
 By \autoref{Mobius}
 $qN_q=\sum_{d\mid q}\mu\left(\frac{q}{d}\right)p^d
 =p^d-p$ so that $N_q=\frac{p^d-p}{q}$.
+
+\item %18
+\item %19
+\item %20
+\item %21
+
+\item Let $\alpha\in\mathbb{F}_{p^n}$
+and suppose that $g_\alpha\left(x\right)
+=\sum_{i=0}^{n-1}b_ix^i\in\mathbb{F}_p\left[x\right]$
+is the minimal polynomial of $\alpha$ over $\mathbb{F}_p$.
+Then $0=g_\alpha\left(\alpha\right)=\sum_{i=0}^{n-1}b_i\alpha^i$.
+Now for any $0\le j\le n-1$ we have
+\[g_\alpha\left(\alpha^{p^j}\right)
+=\sum_{i=0}^{n-1}b_i\alpha^{ip^j}
+=\left(\sum_{i=0}^{n-1}b_i\alpha^i\right)^{p^j}=0.\]
+This shows that $\alpha,\alpha^p,\alpha^{p^2},\ldots,\alpha^{p^{n-1}}$
+are the roots of $g_\alpha\left(x\right)$ so that
+\[f\left(x\right)=\prod_{j=0}^{n-1}\left(x-\alpha^{p^j}\right)\]
+coincides with $g_\alpha\left(x\right)$. We conclude that
+$f\left(x\right)=g_\alpha\left(x\right)
+\in\mathbb{F}_p\left[x\right]$.
 \end{enumerate}
 \end{document}
