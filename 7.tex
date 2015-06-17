@@ -281,21 +281,34 @@ $qN_q=\sum_{d\mid q}\mu\left(\frac{q}{d}\right)p^d
 \item %19
 \item %20
 \item %21
-
-\item Let $\alpha\in\mathbb{F}_{p^n}$
+Let $\alpha\in\mathbb{F}_{p^n}$
 and suppose that $g_\alpha\left(x\right)
-=\sum_{i=0}^{n-1}b_ix^i\in\mathbb{F}_p\left[x\right]$
+=\sum_{i=0}^nb_ix^i\in\mathbb{F}_p\left[x\right]$
 is the minimal polynomial of $\alpha$ over $\mathbb{F}_p$.
-Then $0=g_\alpha\left(\alpha\right)=\sum_{i=0}^{n-1}b_i\alpha^i$.
+Then $0=g_\alpha\left(\alpha\right)=\sum_{i=0}^nb_i\alpha^i$.
 Now for any $0\le j\le n-1$ we have
 \[g_\alpha\left(\alpha^{p^j}\right)
-=\sum_{i=0}^{n-1}b_i\alpha^{ip^j}
-=\left(\sum_{i=0}^{n-1}b_i\alpha^i\right)^{p^j}=0.\]
+=\sum_{i=0}^nb_i\alpha^{ip^j}
+=\left(\sum_{i=0}^nb_i\alpha^i\right)^{p^j}=0.\]
 This shows that $\alpha,\alpha^p,\alpha^{p^2},\ldots,\alpha^{p^{n-1}}$
 are the roots of $g_\alpha\left(x\right)$ so that
 \[f\left(x\right)=\prod_{j=0}^{n-1}\left(x-\alpha^{p^j}\right)\]
-coincides with $g_\alpha\left(x\right)$. We conclude that
+coincides with $g_\alpha\left(x\right)$, both
+polynomials being monic and having the same roots.
+We conclude that
 $f\left(x\right)=g_\alpha\left(x\right)
 \in\mathbb{F}_p\left[x\right]$.
+
+\item %22
+\begin{enumerate}
+\item $\mathsf{tr}\left(\alpha+\beta\right)
+=\sum_{j=0}^{n-1}\left(\alpha+\beta\right)^{p^j}
+=\sum_{j=0}^{n-1}\left(\alpha^{p^j}+\beta^{p^j}\right)
+=\mathsf{tr}\left(\alpha\right)+\mathsf{tr}\left(\beta\right)$
+\item $\mathsf{tr}\left(a\alpha\right)
+=\sum_{j=0}^{n-1}\left(a\alpha\right)^{p^j}
+=\sum_{j=0}^{n-1}a\alpha^{p^j}=a\mathsf{tr}\left(\alpha\right)$.
+\end{enumerate}
+
 \end{enumerate}
 \end{document}
