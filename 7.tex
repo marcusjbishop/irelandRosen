@@ -279,7 +279,27 @@ $qN_q=\sum_{d\mid q}\mu\left(\frac{q}{d}\right)p^d
 
 \item %18
 \item %19
+$\sum_f\left|f\right|^{-s}
+=\sum_{n\ge 0}\sum_{\deg{f}=n}\left|f\right|^{-s}
+=\sum_{n\ge 0}\sum_{\deg{f}=n}q^{-sn}
+=\sum_{n\ge 0}q^{n}q^{-sn}
+=\sum_{n\ge 0}q^{n\left(1-s\right)}
+=\frac{1}{1-q^{1-s}}$
+
 \item %20
+$\sum_fd\left(f\right)\left|f\right|^{-s}$
+counts $q^{-s\deg{f}}$ for each divisor of each monic polynomial $f$.
+Another way to calculate the sum is to count
+$q^{-s\left(\deg{f}+\deg{g}\right)}$ for every monic polynomial $g$
+for every monic polynomial $f$. This gives
+\begin{align*}
+\sum_{m\ge 0}\sum_{n\ge 0}q^{m+n-s\left(m+n\right)}
+&=\sum_{k\ge 0}\left(k+1\right)q^{k-sk}\\
+&=\frac{1}{1-s}\frac{d}{dq}\sum_{k\ge 1}
+q^{\left(k+1\right)\left(1-s\right)}\\
+&=\frac{1}{1-s}\frac{d}{dq}\frac{q^{2\left(1-s\right)}}{1-q^{1-s}}
+\end{align*}
+
 \item %21
 Let $\alpha\in\mathbb{F}_{p^n}$
 and suppose that $g_\alpha\left(x\right)
