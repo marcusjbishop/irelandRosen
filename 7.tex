@@ -295,9 +295,11 @@ for every monic polynomial $f$. This gives
 \begin{align*}
 \sum_{m\ge 0}\sum_{n\ge 0}q^{m+n-s\left(m+n\right)}
 &=\sum_{k\ge 0}\left(k+1\right)q^{k-sk}\\
-&=\frac{1}{1-s}\frac{d}{dq}\sum_{k\ge 1}
-q^{\left(k+1\right)\left(1-s\right)}\\
-&=\frac{1}{1-s}\frac{d}{dq}\frac{q^{2\left(1-s\right)}}{1-q^{1-s}}
+&=\sum_{k\ge 0}\left(k+1\right)r^k\qquad\text{where $r=q^{1-s}$}\\
+&=\frac{d}{dr}\sum_{k\ge 0}r^{k+1}\\
+&=\frac{d}{dr}\frac{r}{1-r}\\
+&=\frac{1}{\left(1-r\right)^2}\\
+&=\frac{1}{\left(1-q^{1-s}\right)^2}\\
 \end{align*}
 
 \item %21
