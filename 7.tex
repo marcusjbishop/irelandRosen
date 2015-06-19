@@ -278,6 +278,24 @@ $qN_q=\sum_{d\mid q}\mu\left(\frac{q}{d}\right)p^d
 =p^d-p$ so that $N_q=\frac{p^d-p}{q}$.
 
 \item %18
+$\mathbb{Z}\left[i\right]/p\mathbb{Z}\left[i\right]$
+inherits the structure of a commutative ring with $1$ from
+$\mathbb{Z}\left[i\right]$. It remains to show that
+$\overline{a}+\overline{b}i$ has an inverse
+for any $a,b\in\mathbb{Z}$ not both divisible by $p$.
+Since $\frac{1}{a+bi}=\frac{a-bi}{a^2+b^2}$ this amounts to
+verifying that $a^2+b^2\not\equiv 0\pmod{p}$.
+If $p$ divides exactly one of $a$ or $b$ then $p$
+does not divide $a^2+b^2$. Thus we can assume
+that $p$ divides {\em neither} of $a$ or $b$.
+
+Now $x^2\equiv -b^2\pmod{p}$ is solvable
+if and only if $1\equiv\left(-b^2\right)^{\frac{p-1}{2}}
+\equiv\left(-1\right)^{\frac{p-1}{2}}\pmod{p}$
+if and only if $p\equiv 1\pmod{4}$.
+Therefore if $p\equiv 3\pmod{4}$ then $x^2+b^2\equiv 0\pmod{p}$
+has no solution $x$, so in particular $a^2+b^2\not\equiv 0$.
+
 \item %19
 $\sum_f\left|f\right|^{-s}
 =\sum_{n\ge 0}\sum_{\deg{f}=n}\left|f\right|^{-s}
@@ -288,10 +306,12 @@ $\sum_f\left|f\right|^{-s}
 
 \item %20
 $\sum_fd\left(f\right)\left|f\right|^{-s}$
-counts $q^{-s\deg{f}}$ for each divisor of each monic polynomial $f$.
+counts $q^{-s\deg{f}}$ for each monic divisor of each monic polynomial $f$.
 Another way to calculate the sum is to count
 $q^{-s\left(\deg{f}+\deg{g}\right)}$ for every monic polynomial $g$
-for every monic polynomial $f$. This gives
+for every monic polynomial $f$. Then since for any $m,n\ge 0$
+there are $q^m$ monic polynomials of degree~$m$
+and $q^n$ of degree~$n$ this gives
 \begin{align*}
 \sum_{m\ge 0}\sum_{n\ge 0}q^{m+n-s\left(m+n\right)}
 &=\sum_{k\ge 0}\left(k+1\right)q^{k-sk}\\
@@ -299,8 +319,21 @@ for every monic polynomial $f$. This gives
 &=\frac{d}{dr}\sum_{k\ge 0}r^{k+1}\\
 &=\frac{d}{dr}\frac{r}{1-r}\\
 &=\frac{1}{\left(1-r\right)^2}\\
-&=\frac{1}{\left(1-q^{1-s}\right)^2}\\
+&=\frac{1}{\left(1-q^{1-s}\right)^2}.
 \end{align*}
+
+$\sum_f\sigma\left(f\right)\left|f\right|^{-s}$
+counts $q^{\deg{g}-s\deg{f}}$ for every divisor $g$ of $f$.
+Another way to calculate the sum is to count
+$q^{\deg{g}-s\left(\deg{f}+\deg{g}\right)}$
+for every monic polynomial $g$ for every monic polynomial $f$. This gives
+\[\sum_{m,n\ge 0}q^{m+2n-s\left(m+n\right)}
+=\sum_{m\ge 0}q^{\left(1-s\right)m}
+\sum_{n\ge 0}q^{\left(2-s\right)n}
+=\left(\frac{1}{1-q^{1-s}}\right)
+\left(\frac{1}{1-q^{2-s}}\right).\]
+
+
 
 \item %21
 Let $\alpha\in\mathbb{F}_{p^n}$
