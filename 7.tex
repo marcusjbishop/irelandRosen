@@ -12,6 +12,7 @@
 \title{Chapter 7}
 \renewcommand{\theenumi}{7.\arabic{enumi}}
 \author{}\date{}
+\let\ker\relax\DeclareMathOperator{\ker}{\mathsf{ker}}
 \let\ord\relax\DeclareMathOperator{\ord}{\mathsf{ord}}
 \let\ln\relax\DeclareMathOperator{\ln}{\mathsf{ln}}
 \let\deg\relax\DeclareMathOperator{\deg}{\mathsf{deg}}
@@ -333,9 +334,7 @@ for every monic polynomial $g$ for every monic polynomial $f$. This gives
 =\left(\frac{1}{1-q^{1-s}}\right)
 \left(\frac{1}{1-q^{2-s}}\right).\]
 
-
-
-\item %21
+\item\label{OtherRoots} %21
 Let $\alpha\in\mathbb{F}_{p^n}$
 and suppose that $g_\alpha\left(x\right)
 =\sum_{i=0}^nb_ix^i\in\mathbb{F}_p\left[x\right]$
@@ -363,7 +362,25 @@ $f\left(x\right)=g_\alpha\left(x\right)
 \item $\mathsf{tr}\left(a\alpha\right)
 =\sum_{j=0}^{n-1}\left(a\alpha\right)^{p^j}
 =\sum_{j=0}^{n-1}a\alpha^{p^j}=a\mathsf{tr}\left(\alpha\right)$.
+\item $\left|\ker\mathsf{tr}\right|=p^{n-1}$
+by the proof of \autoref{KerTr} below. Therefore $\ker\mathsf{tr}\ne\emptyset$.
 \end{enumerate}
+
+\item %23
+We first claim that
+\begin{equation}\label{KerTr}
+\ker\mathsf{tr}
+=\left\{x-x^p\mid x\in \mathbb{F}_{p^n}\right\}.
+\end{equation}
+Indeed, one easily verifies that $\mathsf{tr}$ 
+and $x\mapsto x-x^p$ are homomorphisms
+of $k$-modules. The kernel of $x\mapsto x-x^p$
+is $\mathbb{F}_p$ so the size of
+$M=\left\{x-x^p\mid x\in \mathbb{F}_{p^n}\right\}$ is $p^{n-1}$.
+The image of $\mathsf{tr}$ is $\mathbb{F}_p$ by \autoref{OtherRoots}.
+So the size of $\ker\mathsf{tr}$ is also $p^{n-1}$.
+One easily verifies that $M$ is contained in $\ker\mathsf{tr}$,
+so \autoref{KerTr} follows.
 
 \end{enumerate}
 \end{document}
