@@ -353,17 +353,22 @@ We conclude that
 $f\left(x\right)=g_\alpha\left(x\right)
 \in\mathbb{F}_p\left[x\right]$.
 
-\item %22
+\item\label{Tr} %22
 \begin{enumerate}
-\item $\mathsf{tr}\left(\alpha+\beta\right)
+\item\label{22A} $\mathsf{tr}\left(\alpha+\beta\right)
 =\sum_{j=0}^{n-1}\left(\alpha+\beta\right)^{p^j}
 =\sum_{j=0}^{n-1}\left(\alpha^{p^j}+\beta^{p^j}\right)
 =\mathsf{tr}\left(\alpha\right)+\mathsf{tr}\left(\beta\right)$
-\item $\mathsf{tr}\left(a\alpha\right)
+\item\label{22B} $\mathsf{tr}\left(a\alpha\right)
 =\sum_{j=0}^{n-1}\left(a\alpha\right)^{p^j}
 =\sum_{j=0}^{n-1}a\alpha^{p^j}=a\mathsf{tr}\left(\alpha\right)$.
-\item $\left|\ker\mathsf{tr}\right|=p^{n-1}$
-by the proof of \autoref{KerTr} below. Therefore $\ker\mathsf{tr}\ne\emptyset$.
+\item Parts~\autoref{22A} and \autoref{22B} show
+that $\mathsf{tr}:\mathbb{F}_{p^n}\to\mathbb{F}_p$
+is a homomorphisms of $\mathbb{F}_p$-modules.
+It follows that $\ker\mathsf{tr}$ is a $\mathbb{F}_p$-submodule
+and $\left|\ker\mathsf{tr}\right|=p^{n-1}$
+since $\mathsf{tr}$ is surjective.
+Therefore $\ker\mathsf{tr}\ne\emptyset$.
 \end{enumerate}
 
 \item %23
@@ -372,13 +377,13 @@ We first claim that
 \ker\mathsf{tr}
 =\left\{x-x^p\mid x\in \mathbb{F}_{p^n}\right\}.
 \end{equation}
-Indeed, one easily verifies that $\mathsf{tr}$ 
-and $x\mapsto x-x^p$ are homomorphisms
-of $k$-modules. The kernel of $x\mapsto x-x^p$
+Indeed, one easily verifies
+that $x\mapsto x-x^p$ is a homomorphism
+of $\mathbb{F}_p$-modules. The kernel of $x\mapsto x-x^p$
 is $\mathbb{F}_p$ so the size of
 $M=\left\{x-x^p\mid x\in \mathbb{F}_{p^n}\right\}$ is $p^{n-1}$.
-The image of $\mathsf{tr}$ is $\mathbb{F}_p$ by \autoref{OtherRoots}.
-So the size of $\ker\mathsf{tr}$ is also $p^{n-1}$.
+As noted in~\autoref{Tr}
+the size of $\ker\mathsf{tr}$ is also $p^{n-1}$.
 One easily verifies that $M$ is contained in $\ker\mathsf{tr}$,
 so \autoref{KerTr} follows.
 
