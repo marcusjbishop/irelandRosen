@@ -107,6 +107,27 @@ This bijection extends to a bijection
 from the set of solutions of $\sum_{i=1}^ka_ix^{m_i}=b$
 to the set of solutions of $\sum_{i=1}^ka_ix^{d_i}=b$.
 
+\item %3
+Since $N\left(x^2=a\right)=1+\rho\left(a\right)$
+we have $\rho\left(a\right)=1-N\left(x^2=a\right)=\tlegendre{a}{p}$.
+It follows that
+\[J\left(\chi,\rho\right)=\sum_{a+b=0}\chi\left(a\right)\rho\left(b\right)
+=\sum_{a=0}^{p-1}\chi\left(1-a\right)\rho\left(a\right)
+=\sum_{a=0}^{p-1}\chi\left(1-a\right)\dlegendre{a}{p}.\]
+Now observe that
+\[0=\sum_{a=0}^{p-1}\chi\left(a-1\right)
+=\sum_{\text{$t$ a residue}}\chi\left(t-1\right)
++\sum_{\text{$t$ a nonresidue}}\chi\left(t-1\right)\]
+so that
+\[\sum_{\text{$t$ a nonresidue}}\chi\left(t-1\right)
+=-\sum_{\text{$t$ a residue}}\chi\left(t-1\right)
+=-\sum_{t=1}^{\frac{p-1}{2}}\chi\left(t-1\right).\]
+It follows that
+\[J\left(\chi,\rho\right)
+=\sum_{a=0}^{p-1}\chi\left(1-a\right)\dlegendre{a}{p}
+=\sum_{\text{$t$ a residue}}\chi\left(t-1\right)
+-\sum_{\text{$t$ a nonresidue}}\chi\left(t-1\right)
+=\sum_{t=0}^{p-1}\chi\left(1-t^2\right).\]
 
 \end{enumerate}
 \end{document}
