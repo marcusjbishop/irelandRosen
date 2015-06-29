@@ -129,6 +129,24 @@ It follows that
 -\sum_{\text{$t$ a nonresidue}}\chi\left(t-1\right)
 =\sum_{t=0}^{p-1}\chi\left(1-t^2\right).\]
 
+\item\label{Exercise4} %4
+No idea.
+
+\item %5
+\begin{align*}
+\left(g\left(\chi\right)\right)^2
+&=\left(\sum\chi\left(t\right)\zeta^t\right)^2\\
+&=\sum_{t=0}^{p-1}\zeta^t
+\sum_{j+k\equiv t}\chi\left(j\right)\chi\left(k\right)\\
+&=\sum_{t=0}^{p-1}\zeta^t
+\sum_{j=0}^{p-1}\chi\left(j\right)\chi\left(t-j\right)\\
+&=\sum_{t=0}^{p-1}\zeta^t\chi\left(\frac{t^2}{2^2}\right)
+J\left(\chi,\rho\right)\qquad(\text{by \autoref{Exercise4}})\\
+&=\chi\left(2\right)^{-2}J\left(\chi,\rho\right)
+\sum_{t=0}^{p-1}\chi\left(t^2\right)\zeta^t\\
+&=\chi\left(2\right)^{-2}J\left(\chi,\rho\right)g\left(\chi^2\right)
+\end{align*}
+
 \end{enumerate}
 \end{document}
 
