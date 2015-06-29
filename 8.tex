@@ -107,7 +107,7 @@ This bijection extends to a bijection
 from the set of solutions of $\sum_{i=1}^ka_ix^{m_i}=b$
 to the set of solutions of $\sum_{i=1}^ka_ix^{d_i}=b$.
 
-\item %3
+\item\label{Exercise3} %3
 Since $N\left(x^2=a\right)=1+\rho\left(a\right)$
 we have $\rho\left(a\right)=1-N\left(x^2=a\right)=\tlegendre{a}{p}$.
 It follows that
@@ -130,7 +130,22 @@ It follows that
 =\sum_{t=0}^{p-1}\chi\left(1-t^2\right).\]
 
 \item\label{Exercise4} %4
-No idea.
+\begin{align*}
+\sum_t\chi\left(t\right)\chi\left(k-t\right)
+&=\sum_t\chi\left(kt\right)\chi\left(k-kt\right)\\
+&=\chi\left(k^2\right)\sum_t\chi\left(t\right)\chi\left(1-t\right)\\
+&=\chi\left(\frac{k^2}{2^2}\right)
+\sum_t\chi\left(2t\right)\chi\left(2-2t\right)\\
+&=\chi\left(\frac{k^2}{2^2}\right)
+\sum_t\chi\left(t\right)\chi\left(2-t\right)\\
+&=\chi\left(\frac{k^2}{2^2}\right)
+\sum_s\chi\left(1+s\right)\chi\left(1-s\right)
+\qquad\text{(where $t=1+s$)}\\
+&=\chi\left(\frac{k^2}{2^2}\right)
+\sum_s\chi\left(1-s^2\right)\\
+&=\chi\left(\frac{k^2}{2^2}\right)J\left(\chi,\rho\right)
+\qquad\text{(by \autoref{Exercise3})}
+\end{align*}
 
 \item %5
 \begin{align*}
