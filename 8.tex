@@ -112,21 +112,21 @@ Since $N\left(x^2=a\right)=1+\rho\left(a\right)$
 we have $\rho\left(a\right)=1-N\left(x^2=a\right)=\tlegendre{a}{p}$.
 It follows that
 \[J\left(\chi,\rho\right)=\sum_{a+b=0}\chi\left(a\right)\rho\left(b\right)
-=\sum_{a=0}^{p-1}\chi\left(1-a\right)\rho\left(a\right)
-=\sum_{a=0}^{p-1}\chi\left(1-a\right)\dlegendre{a}{p}.\]
+=\sum_{t=0}^{p-1}\chi\left(1-t\right)\rho\left(a\right)
+=\sum_{t=0}^{p-1}\chi\left(1-t\right)\dlegendre{t}{p}.\]
 Now observe that
-\[0=\sum_{a=0}^{p-1}\chi\left(a-1\right)
-=\sum_{\text{$t$ a residue}}\chi\left(t-1\right)
-+\sum_{\text{$t$ a nonresidue}}\chi\left(t-1\right)\]
+\[0=\sum_{t=0}^{p-1}\chi\left(1-t\right)
+=\sum_{\text{$t$ a residue}}\chi\left(1-t\right)
++\sum_{\text{$t$ a nonresidue}}\chi\left(1-t\right)\]
 so that
-\[\sum_{\text{$t$ a nonresidue}}\chi\left(t-1\right)
-=-\sum_{\text{$t$ a residue}}\chi\left(t-1\right)
-=-\sum_{t=1}^{\frac{p-1}{2}}\chi\left(t-1\right).\]
+\[\sum_{\text{$t$ a nonresidue}}\chi\left(1-t\right)
+=-\sum_{\text{$t$ a residue}}\chi\left(1-t\right)
+=-\sum_{t=1}^{\frac{p-1}{2}}\chi\left(1-t^2\right).\]
 It follows that
 \[J\left(\chi,\rho\right)
 =\sum_{a=0}^{p-1}\chi\left(1-a\right)\dlegendre{a}{p}
-=\sum_{\text{$t$ a residue}}\chi\left(t-1\right)
--\sum_{\text{$t$ a nonresidue}}\chi\left(t-1\right)
+=\sum_{\text{$t$ a residue}}\chi\left(1-t\right)
+-\sum_{\text{$t$ a nonresidue}}\chi\left(1-t\right)
 =\sum_{t=0}^{p-1}\chi\left(1-t^2\right).\]
 
 \item\label{Exercise4} %4
@@ -156,7 +156,8 @@ It follows that
 &=\sum_{t=0}^{p-1}\zeta^t
 \sum_{j=0}^{p-1}\chi\left(j\right)\chi\left(t-j\right)\\
 &=\sum_{t=0}^{p-1}\zeta^t\chi\left(\frac{t^2}{2^2}\right)
-J\left(\chi,\rho\right)\qquad(\text{by \autoref{Exercise4}})\\
+J\left(\chi,\rho\right)
+\qquad(\text{by \autoref{Exercise4} since $\chi\ne\epsilon$)}\\
 &=\chi\left(2\right)^{-2}J\left(\chi,\rho\right)
 \sum_{t=0}^{p-1}\chi\left(t^2\right)\zeta^t\\
 &=\chi\left(2\right)^{-2}J\left(\chi,\rho\right)g\left(\chi^2\right)
@@ -173,6 +174,17 @@ J\left(\chi,\rho\right)
 &=\chi\left(2\right)^2
 \sum_s\chi\left(s\right)\chi\left(1-s\right)\\
 &=\chi\left(2\right)^2J\left(\chi,\chi\right)
+\end{align*}
+
+\item %7
+No idea
+\item %8
+\begin{align*}
+\sum_{\lambda^m=\epsilon}J\left(\chi,\lambda\right)
+&=\sum_{\lambda^m=\epsilon}\sum_t\chi\left(1-t\right)\lambda\left(t\right)\\
+&=\sum_t\chi\left(1-t\right)\sum_{\lambda^m=\epsilon}\lambda\left(t\right)\\
+&=\sum_t\chi\left(1-t\right)N\left(x^m=t\right)\\
+&=\sum_x\chi\left(1-x^m\right)
 \end{align*}
 
 \end{enumerate}
