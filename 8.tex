@@ -147,7 +147,7 @@ It follows that
 \qquad\text{(by \autoref{Exercise3})}
 \end{align*}
 
-\item %5
+\item\label{Exercise5} %5
 \begin{align*}
 \left(g\left(\chi\right)\right)^2
 &=\left(\sum\chi\left(t\right)\zeta^t\right)^2\\
@@ -186,6 +186,48 @@ No idea
 &=\sum_t\chi\left(1-t\right)N\left(x^m=t\right)\\
 &=\sum_x\chi\left(1-x^m\right)
 \end{align*}
+
+\item %9
+First we compute some character values.
+Since $\chi\left(2\right)^{-2}$ is the inverse
+of $\chi\left(2\right)^2$
+we have $\chi\left(2\right)^{-2}=\chi\left(2\right)$
+since $\chi\left(2\right)\chi\left(2\right)^2=1$
+as $\chi$ has order three.
+
+On one hand $\chi\left(-1\right)$ is a cube root
+of unity. But on the other hand
+$\chi\left(-1\right)^2=\chi\left(1\right)=1$.
+This means that $\chi\left(-1\right)=1$.
+
+Next we compute
+\begin{equation}\label{9Sum}
+g\left(\chi\right)g\left(\overline{\chi}\right)
+=\left(\sum_j\chi\left(j\right)\zeta^j\right)
+\left(\sum_k\chi\left(k\right)\zeta^k\right)
+=\sum_t\zeta^t\sum_j\chi\left(j\right)\overline{\chi}\left(t-j\right).
+\end{equation}
+Now if $t\ne 0$ then
+\[\sum_j\chi\left(j\right)\overline{\chi}\left(t-j\right)
+=\sum_j\chi\left(tj\right)\overline{\chi}\left(t-tj\right)
+=\chi\left(t\right)\overline{\chi}\left(t\right)
+\sum_j\chi\left(j\right)\overline{\chi}\left(1-j\right)
+=J\left(\chi,\overline{\chi}\right)=-\chi\left(-1\right).\]
+If $t=0$ then
+\[\sum_j\chi\left(j\right)\overline{\chi}\left(-j\right)
+=\sum_j\chi\left(j\right)\overline{\chi}\left(j\right)
+\overline{\chi}\left(-1\right)
+=\left(p-1\right)\chi\left(-1\right).\]
+Substituting into \autoref{9Sum} and using the character values
+computed above gives
+\[g\left(\chi\right)g\left(\overline{\chi}\right)
+=\left(p-1\right)+\sum_{t\ne 0}\left(-1\right)\zeta^t=p\]
+
+Finally by \autoref{Exercise5} we have
+\[\left(g\left(\chi\right)\right)^3
+=\chi\left(2\right)^{-2}J\left(\chi,\rho\right)g\left(\chi^2\right)
+g\left(\chi\right)=\chi\left(2\right)J\left(\chi,\rho\right)p\]
+since $\chi^2=\overline{\chi}$.
 
 \end{enumerate}
 \end{document}
