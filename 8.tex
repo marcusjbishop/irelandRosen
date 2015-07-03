@@ -184,7 +184,31 @@ so that $J\left(\chi,\chi\right)=\chi\left(2\right)^{-2}
 J\left(\chi,\rho\right)$.
 
 \item %7
-No idea
+First we calculate
+\begin{align*}
+\left(g\left(\rho\right)\right)^2
+&=\left(g\left(\chi^2\right)\right)^2\\
+&=\sum_t\zeta^t\sum_j\chi^2\left(j\right)
+\chi^2\left(t-j\right)\\
+&=\sum_j\chi^2\left(j\right)\chi^2\left(-j\right)
++\sum_{t\ne 0}\zeta^t\sum_j\chi^2\left(tj\right)
+\chi^2\left(t-tj\right)\\
+&=\chi^2\left(-1\right)\sum_j\chi^4\left(j\right)
++\sum_t\zeta^t\chi^4\left(t\right)\sum_j\chi^2\left(j\right)
+\chi^2\left(1-j\right)\\
+&=p-1+\sum_t\zeta^tJ\left(\chi^2,\chi^2\right)\\
+&=p-1+1=p.
+\end{align*}
+Next we observe that
+$g\left(\chi\right)^4=\chi\left(-1\right)pJ\left(\chi,\chi\right)
+J\left(\chi,\rho\right)$ by Proposition~8.3.3.
+However $g\left(\chi\right)^4=J\left(\chi,\rho\right)^2g\left(\rho\right)^2$
+by \autoref{Exercise5}.
+Using the calculation above this means that
+\[\chi\left(-1\right)pJ\left(\chi,\chi\right)J\left(\chi,\rho\right)=
+J\left(\chi,\rho\right)^2p\]
+so that $\chi\left(-1\right)J\left(\chi,\chi\right)=J\left(\chi,\rho\right)$.
+
 \item %8
 \begin{align*}
 \sum_{\lambda^m=\epsilon}J\left(\chi,\lambda\right)
