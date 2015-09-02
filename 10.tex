@@ -54,5 +54,54 @@
 
 \begin{enumerate}
 \item %1
+
+\item %2
+\item %3
+We will prove that $\left|\mathbb{P}^{n}\right|
+=1+q+\cdots+q^n$ by induction.
+If $n=0$ then the formula holds, since $\mathbb{P}^0$ has exactly
+one point.
+We assume that $\left|\mathbb{P}^{n-1}\right|
+=1+q+\cdots+q^{n-1}$ by induction.
+Then since $\mathbb{P}^n=\mathbb{P}^{n-1}\coprod\mathbb{A}^n$
+we have $\left|\mathbb{P}^n\right|
+=\left|\mathbb{P}^{n-1}\right|+\left|\mathbb{A}^n\right|
+=1+q+\cdots+q^n$.
+
+\item %4
+Write $f\left(x_0,x_1,\ldots,x_n\right)
+=a_0x_0+a_1x_1+\cdots+a_nx_n$.
+Although not mentioned, we assume that $f\ne 0$
+since otherwise $\overline{H}_f=\mathbb{P}^n$,
+which does {\em not} have the same number of points
+as $\mathbb{P}^{n-1}$. We therefore assume that one of
+$a_0,a_1,\ldots,a_n$ is nonzero, say $a_n$. Define
+$\varphi:\mathbb{P}^{n-1}\to\overline{H}_f$ by
+\[\varphi\left[x_0,x_1,\ldots,x_{n-1}\right]
+=\left[x_0,x_1,\ldots,x_{n-1},-\frac{a_0x_0+\cdots+a_{n-1}x_{n-1}}{a_n}
+\right].\]
+Then $\varphi$ is well-defined since
+\[\varphi\left[\alpha x_0,\ldots,\alpha x_{n-1}\right]
+=\left[\alpha x_0,\ldots,\alpha x_{n-1},
+-\frac{a_0\alpha x_0+\cdots+a_{n-1}\alpha x_{n-1}}{a_n}\right]
+=\varphi\left[x_0,x_1,\ldots,x_{n-1}\right]\]
+for any $\alpha\ne 0$.
+Now if $\varphi\left(x\right)=\varphi\left(y\right)$
+then there exists $\beta\ne 0$ such that
+\[\left[x_0,\ldots,x_{n-1},-\frac{a_0x_0
++\cdots+a_{n-1}x_{n-1}}{a_n}\right]
+=\left[\beta y_0,\ldots,\beta y_{n-1},-\beta\frac{a_0y_0
++\cdots+a_{n-1}y_{n-1}}{a_n}\right]\]
+In particular this means that $x_i=\beta y_i$
+for all $0\le i\le n-1$ so that $x=y$.
+This shows that $\varphi$ is injective.
+Finally, suppose that $y$ is any point on $\overline{H}_f$.
+This means that $a_0y_0+\cdots+a_ny_n=0$
+so that $y_n=-\frac{a_0y_0+\cdots+a_{n-1}y_{n-1}}{a_n}$.
+Then putting $x=\left[y_0,\ldots,y_{n-1}\right]$ we have
+\[\varphi\left(x\right)
+=\left[y_0,\ldots,y_{n-1},-\frac{a_0y_0+\cdots+a_{n-1}y_{n-1}}{a_n}
+\right]=y.\]
+This shows that $\varphi$ is surjective.
 \end{enumerate}
 \end{document}
