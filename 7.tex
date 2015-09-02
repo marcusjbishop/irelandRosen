@@ -221,7 +221,8 @@ We will show that $f\left(x\right)$ divides $x^{q^n}-x$
 if and only if $d\mid n$.
 
 Suppose that $f\left(x\right)$ divides $x^{q^n}-x$.
-Then $x^{q^n}-x=f\left(x\right)g\left(x\right)$.
+Then $x^{q^n}-x=f\left(x\right)g\left(x\right)$
+for some $g\left(x\right)\in\mathbb{F}_q\left[x\right]$.
 Substituting $x=\alpha$ shows that $\alpha^{q^n}=\alpha$.
 Now if $\beta=\sum_{i=0}^{d-1}b_i\alpha^i$ is any element
 of~$K$ with $b_0,b_1,\ldots,b_{d-1}\in\mathbb{F}_q$ then
@@ -337,21 +338,24 @@ for every monic polynomial $g$ for every monic polynomial $f$. This gives
 \item\label{OtherRoots} %21
 Let $\alpha\in\mathbb{F}_{p^n}$
 and suppose that $g_\alpha\left(x\right)
-=\sum_{i=0}^nb_ix^i\in\mathbb{F}_p\left[x\right]$
+=\sum_{i=0}^db_ix^i\in\mathbb{F}_p\left[x\right]$
 is the minimal polynomial of $\alpha$ over $\mathbb{F}_p$.
-Then $0=g_\alpha\left(\alpha\right)=\sum_{i=0}^nb_i\alpha^i$.
+Note that $d$ divides $n$ by Theorem~2.
+Then $0=g_\alpha\left(\alpha\right)=\sum_{i=0}^db_i\alpha^i$.
 Now for any $0\le j\le n-1$ we have
 \[g_\alpha\left(\alpha^{p^j}\right)
-=\sum_{i=0}^nb_i\alpha^{ip^j}
-=\left(\sum_{i=0}^nb_i\alpha^i\right)^{p^j}=0.\]
+=\sum_{i=0}^db_i\alpha^{ip^j}
+=\left(\sum_{i=0}^db_i\alpha^i\right)^{p^j}=0.\]
 This shows that $\alpha,\alpha^p,\alpha^{p^2},\ldots,\alpha^{p^{n-1}}$
-are the roots of $g_\alpha\left(x\right)$ so that
-\[f\left(x\right)=\prod_{j=0}^{n-1}\left(x-\alpha^{p^j}\right)\]
-coincides with $g_\alpha\left(x\right)$, both
-polynomials being monic and having the same roots.
-We conclude that
-$f\left(x\right)=g_\alpha\left(x\right)
-\in\mathbb{F}_p\left[x\right]$.
+are roots of $g_\alpha\left(x\right)$.
+Furthermore $\alpha^{p^d}=\alpha$ since $g_\alpha\left(x\right)$
+divides $x^{p^d}-x$ by Theorem~2.
+Thus each distinct
+root $\alpha,\alpha^p,\alpha^{p^2},\ldots,\alpha^{p^{n-1}}$
+occurs $n/d$~times. This shows that
+\[f\left(x\right)=\prod_{j=0}^{n-1}\left(x-\alpha^{p^j}\right)
+=\left(g_\alpha\left(x\right)\right)^{n/d}
+\in\mathbb{F}_p\left[x\right].\]
 
 \item\label{Tr} %22
 \begin{enumerate}
@@ -364,28 +368,45 @@ $f\left(x\right)=g_\alpha\left(x\right)
 =\sum_{j=0}^{n-1}a\alpha^{p^j}=a\mathsf{tr}\left(\alpha\right)$.
 \item Parts~\autoref{22A} and \autoref{22B} show
 that $\mathsf{tr}:\mathbb{F}_{p^n}\to\mathbb{F}_p$
-is a homomorphisms of $\mathbb{F}_p$-modules.
-It follows that $\ker\mathsf{tr}$ is a $\mathbb{F}_p$-submodule
-and $\left|\ker\mathsf{tr}\right|=p^{n-1}$
-since $\mathsf{tr}$ is surjective.
-Therefore $\ker\mathsf{tr}\ne\emptyset$.
+is a homomorphism of $\mathbb{F}_p$-modules.
+The polynomial $\mathsf{tr}\left(x\right)
+=x^{p^{n-1}}+x^{p^{n-2}}+\cdots+x^p+x$ can have
+at most~$p^{n-1}$ roots in $\mathbb{F}_{p^n}$.
+Therefore at least $p^n-p^{n-1}$ elements have nonzero trace.
 \end{enumerate}
 
 \item %23
 We first claim that
 \begin{equation}\label{KerTr}
 \ker\mathsf{tr}
-=\left\{x-x^p\mid x\in \mathbb{F}_{p^n}\right\}.
+=\left\{x^p-x\mid x\in \mathbb{F}_{p^n}\right\}.
 \end{equation}
 Indeed, one easily verifies
-that $x\mapsto x-x^p$ is a homomorphism
-of $\mathbb{F}_p$-modules. The kernel of $x\mapsto x-x^p$
+that $x\mapsto x^p-x$ is a homomorphism
+of $\mathbb{F}_p$-modules. The kernel of $x\mapsto x^p-x$
 is $\mathbb{F}_p$ so the size of
-$M=\left\{x-x^p\mid x\in \mathbb{F}_{p^n}\right\}$ is $p^{n-1}$.
+$M=\left\{x^p-x\mid x\in \mathbb{F}_{p^n}\right\}$ is $p^{n-1}$.
 As noted in~\autoref{Tr}
-the size of $\ker\mathsf{tr}$ is also $p^{n-1}$.
-One easily verifies that $M$ is contained in $\ker\mathsf{tr}$,
+the size of $\ker\mathsf{tr}$ is at most $p^{n-1}$.
+One easily verifies that $M$ is contained in $\ker\mathsf{tr}$
 so \autoref{KerTr} follows.
+
+Now if $\beta\in\mathbb{F}_{p^n}$
+is a root of $x^p-x-\alpha$ then $\beta^p-\beta=\alpha$. But then
+\[\left(\beta+j\right)^p-\left(\beta+j\right)
+=\beta^p+j-\beta-j=\beta^p-\beta=\alpha\]
+for any $j\in\mathbb{F}_p$. We conclude that
+if $x^p-x-\alpha$ has a root in $\mathbb{F}_{p^n}$
+then it has $p$~roots and thereby splits completely.
+In this situation
+\[\mathsf{tr}\left(\alpha\right)
+=\sum_{j=0}^{n-1}\alpha^{p^j}
+=\sum_{j=0}^{n-1}\left(\beta^p-\beta\right)^{p^j}
+=\beta^{p^n}-\beta=0.\]
+If conversely $\mathsf{tr}\left(\alpha\right)=0$
+then \autoref{KerTr} shows that $\alpha=\beta^p-\beta$
+for some $\beta\in\mathbb{F}_{p^n}$. Therefore $x^p-x-\alpha$
+has a root $\beta$ and thereby splits completely.
 
 \end{enumerate}
 \end{document}
