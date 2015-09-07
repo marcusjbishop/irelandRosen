@@ -133,6 +133,29 @@ Then putting $x=\left[y_0,\ldots,y_{n-1}\right]$ we have
 This shows that $\varphi$ is surjective.
 
 \item %5
+Let $g=a_0x_0+a_1x_1+a_2x_2$. We can assume that
+$g\ne 0$ since otherwise $\overline{H}_{\overline{g}}$
+would be all of $\mathbb{P}^2$,
+in which case the assertion is false.
+We therefore assume that one of $a_0,a_1,a_2$ is nonzero,
+say $a_1\ne 0$. The points at infinity satisfying
+both equations are those of the form $\left[0,x,y\right]$.
+Then since $g\left(0,x,y\right)=0$ we have
+$x_1=-\frac{a_2x_2}{a_1}$. This means that the two curves
+have a single common point at infinity
+$\left[0,-\frac{a_2x_2}{a_1},x_2\right]$ if
+$f\left(0,-\frac{a_2x_2}{a_1},x_2\right)=0$
+or no points at infinity otherwise.
+\\
+Now let $\left[1,x_1,x_2\right]$ be a common affine point
+on the two curves. Then since $g\left(1,x_1,x_2\right)=0$
+we have $x_1=\frac{a_0-a_2x_2}{a_1}$. Now since
+$f\left(1,\frac{a_0-a_2x_2}{a_1},x_2\right)$ is a univariate
+polynomial of degree $m$ in $x_2$, it has at most
+$n$~solutions.
+
+We therefore have too many points\dots
+
 \item %6
 The elements of $\mathsf{GL}_n\left(F\right)$
 correspond with ordered bases $\left(v_1,v_2,\ldots,v_n\right)$ of $F^n$.
