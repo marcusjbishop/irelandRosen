@@ -12,6 +12,7 @@
 \title{Chapter 10}
 \renewcommand{\theenumi}{10.\arabic{enumi}}
 \author{}\date{}
+\let\det\relax\DeclareMathOperator{\det}{\mathsf{det}}
 \let\ker\relax\DeclareMathOperator{\ker}{\mathsf{ker}}
 \let\ord\relax\DeclareMathOperator{\ord}{\mathsf{ord}}
 \let\ln\relax\DeclareMathOperator{\ln}{\mathsf{ln}}
@@ -54,6 +55,33 @@
 
 \begin{enumerate}
 \item %1
+Let $K$ be an infinite field and $f$ a non-zero polynomial
+of degree~$m$ in $K\left[x_1,x_2,\ldots,x_n\right]$.
+We will show that $f$ is not identically
+zero on $\mathbb{A}^n$. The proof if by induction on~$n$.
+
+Suppose that $n=1$. This means that $f$ is a univariate polynomial
+of degree~$m$ over~$K$. Recall that a non-zero univariate polynomial
+of degree~$m$ over {\em any} field can have at most $m$~roots
+in that field. Now if $f$ were identically zero on $\mathbb{A}^1$
+then $f$~would have more than $m$~roots. This would mean that
+$f$ is the zero polynomial, a contradiction.
+
+Now suppose that the claim holds when $f$ is a polynomial
+in fewer than $n$~variables. Then we can write
+\[f\left(x_1,x_2,\ldots,x_n\right)=\sum_{i=0}^m
+g_i\left(x_1,x_2,\ldots,x_{n-1}\right)x_n^i\]
+for some polynomials $g_i\in K\left[x_1,\ldots,x_{n-1}\right]$.
+Now if $f$~ were identically zero on $\mathbb{A}^n$ then
+for any $a_1,a_2,\ldots a_{n-1}\in K$
+\[\sum_{i=0}^m g_i\left(a_1,a_2,\ldots,a_{n-1}\right)x_n^i\]
+would be a univariate polynomial of degree~$m$ in $x_n$
+which vanishes for all values of $x_n$. This would mean
+that $g_i\left(a_1,a_2,\ldots,a_{n-1}\right)=0$ for all~$i$.
+But since $a_1,a_2,\ldots,a_{n-1}$ were arbitrary, this would
+mean by induction that each $g_i$ is the zero polynomial.
+In turn, this would mean that~$f$
+is the zero polynomial, a contradiction.
 
 \item %2
 \item %3
@@ -103,5 +131,101 @@ Then putting $x=\left[y_0,\ldots,y_{n-1}\right]$ we have
 =\left[y_0,\ldots,y_{n-1},-\frac{a_0y_0+\cdots+a_{n-1}y_{n-1}}{a_n}
 \right]=y.\]
 This shows that $\varphi$ is surjective.
+
+\item %5
+\item %6
+The elements of $\mathsf{GL}_n\left(F\right)$
+correspond with ordered bases $\left(v_1,v_2,\ldots,v_n\right)$ of $F^n$.
+To count these, we first observe that $v_1$ can be any of the
+$q^n-1$ nonzero vectors. Then $v_2$ can be any vector which
+is not a multiple of $v_1$. There are $q^n-q$ such vectors.
+Now $v_3$ can be any vector which is not an linear combination
+of $v_1$ and $v_2$. There are $q^n-q^2$ such vectors.
+Continuing in this way we find that
+\[\left|\mathsf{GL}_n\left(F\right)\right|
+=\left(q^n-1\right)\left(q^n-q\right)\cdots\left(q^n-q^{n-1}\right).\]
+Now to count the elements of $\mathsf{SL}_n\left(F\right)$
+we regard $\mathsf{GL}_n\left(F\right)$ as a group
+and $\det:\mathsf{GL}_n\left(F\right)\to\mathsf{GL}_1\left(F\right)$
+as a group homomorphism. Then $\mathsf{SL}_n\left(F\right)
+=\ker\left(\det\right)$ is a normal subgroup of $\mathsf{GL}_n\left(F\right)$
+and $\mathsf{GL}_n\left(F\right)/\ker\left(\det\right)$
+is isomorphic to the image
+of $\det$. Since $\det$ is surjective we have
+$\frac{\left|\mathsf{GL}_n\left(F\right)\right|}
+{\left|\mathsf{SL}_n\left(F\right)\right|}=q-1$
+so that
+\[\left|\mathsf{GL}_n\left(F\right)\right|
+=\left(q-1\right)^{-1}
+\left(q^n-1\right)\left(q^n-q\right)\cdots\left(q^n-q^{n-1}\right).\]
+
+\item\label{Number7} %7
+If $f=x_0^{i_0}\cdots x_n^{i_n}$ is a monomial with $i_0+\cdots+i_n=m$ then 
+$\frac{\partial f}{\partial x_j}=i_jx_0^{i_0}\cdots x_j^{i_j-1}
+\cdots x_n^{i_n}$ so that
+\[\sum_{j=0}^n
+x_j\frac{\partial f}{\partial x_j}
+=\sum_{j=0}^ni_jx_0^{i_0}\cdots x_n^{i_n}
+=f\sum_{j=0}^ni_j=mf.\]
+It follows that if $f=\sum_{i_0,\ldots,i_n}
+\alpha_{i_0,\ldots,i_n}x_0^{i_0}\cdots x_n^{i_n}$ then
+\begin{multline*}
+\sum_{j=0}^n
+x_j\frac{\partial f}{\partial x_j}
+=\sum_{j=0}^n x_j\frac{\partial}{\partial x_j}
+\sum_{i_0,\ldots,i_n}
+\alpha_{i_0,\ldots,i_n}x_0^{i_0}\cdots x_n^{i_n}
+=\sum_{i_0,\ldots,i_n}\alpha_{i_0,\ldots,i_n}
+\sum_{j=0}^n x_j\frac{\partial}{\partial x_j}
+x_0^{i_0}\cdots x_n^{i_n}\\
+=\sum_{i_0,\ldots,i_n}
+\alpha_{i_0,\ldots,i_n}
+mx_0^{i_0}\cdots x_n^{i_n}=mf.
+\end{multline*}
+
+\item %8
+$mf\left(\overline{a}\right)=
+\sum_{j=0}^n x_j\frac{\partial f}{\partial x_j}\left(\overline{a}\right)
+=0$ by~\autoref{Number7}.
+But since $m$ is prime to the characteristic
+of~$F$ it follows that $f\left(\overline{a}\right)=0$.
+
+\item %9
+$\frac{\partial}{\partial x_j}
+\left(a_0x_0^m+\cdots+a_nx_n^m\right)=
+mx_j^{m-1}$. Thus if $\left[x_0,\ldots,x_n\right]$
+is a zero of all the partials
+then $0=mx_j^{m-1}$ for all~$j$. But since $m$ is prime
+to the characteristic of $F$ it follows that $x_j=0$ for all~$j$.
+However, $\left[0,\ldots,0\right]$ is not a point of
+$\mathbb{P}^n$ so $\overline{H}_{\overline{f}}$ has no singular points.
+
+\item %10
+\item %11
+Let $f=y^2-x^3\in F\left[x,y\right]$.
+Then the homogenization of $f$
+is $\overline{f}=ty^2-x^3\in F\left[t,x,y\right]$.
+Then $\nabla\overline{f}=\left(y^2,-3x^2,2yt\right)$ so that
+$\nabla\overline{f}\left(1,0,0\right)
+=\left(0,0,0\right)$. This shows that $\left(1,0,0\right)$,
+the point on the projective closure
+of $H_f$ corresponding with the origin, is a singular point.
+Therefore the origin is a singular point of $H_f$.
+
+\item %12
+Let $f=x^2+y^2+x^2y^2$. Then the homogenization of $f$
+is $\overline{f}=t^2x^2+t^2y^2+x^2y^2$. The points at infinity
+of $\overline{H}_{\overline{f}}$ are the points $\left[0,x,y\right]$
+satisfying $0=\overline{f}\left(0,x,y\right)=x^2y^2$.
+It follows that either $x=0$ or $y=0$. If $x=0$ then $y$
+can take any value. However, as $y$ ranges over $F$ the points
+$\left[0,0,y\right]$ all correspond with the same point
+$\left[0,0,1\right]$. Similarly, if $y=0$ we find only
+the point $\left[0,1,0\right]$. Thus the points at infinity are
+$\left[0,1,0\right]$ and $\left[0,0,1\right]$.
+We calculate $\nabla\overline{f}
+=\left(2tx^2+2ty^2,2t^2x+2xy^2,2t^2y+2x^2y\right)$.
+Substituting each point at infinity gives $\left(0,0,0\right)$
+so both points are singular.
 \end{enumerate}
 \end{document}
