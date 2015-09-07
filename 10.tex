@@ -227,5 +227,50 @@ We calculate $\nabla\overline{f}
 =\left(2tx^2+2ty^2,2t^2x+2xy^2,2t^2y+2x^2y\right)$.
 Substituting each point at infinity gives $\left(0,0,0\right)$
 so both points are singular.
+
+\item %13
+Let $f=ax^2+bxy+cy^2-1$. Then the homogenization of $f$
+is $\overline{f}=ax^2+bxy+cy^2-t^2$. Now if
+$\overline{a}=\left[0,x,y\right]$ is a point at infinity
+then $0=\overline{f}\left(\overline{a}\right)=ax^2+bxy+cy^2$ tells us
+that either $x$ or $y$ must be nonzero, say $y\ne 0$. Then
+\[x=\frac{-by\pm\sqrt{b^2y^2-4acy^2}}{2a}
+=\frac{-by\pm y\sqrt{b^2-4ac}}{2a}.\]
+If $b^2-4ac$ is not a square in $F$ then there are no solutions
+$x$ and therefore no points at infinity.
+If $b^2-4ac$ is a square then there are either
+one or two points at infinity, depending on whether $b^2-4ac$
+is zero or not. In the case $b^2-4ac=0$ the point
+is $\overline{a}=\left[0,-\frac{by}{2a},y\right]$.
+Note that this expression does not depend on the representative $y$.
+We calculate $\nabla\overline{f}=\left(
+-2t,2ax+by,bx+2cy\right)$ so that
+$\nabla\overline{f}\left(\overline{a}\right)=\left(
+0,0,0\right)$ since $0=b^2-4ac$.
+This shows that $\overline{a}$ is singular.
+
+\item %14
+Let $f=x^3-y^2+ax+b$. Then the homogenization of $f$
+is $\overline{f}=x^3-ty^2+at^2x+bt^3$. We calculate
+$\nabla\overline{f}=\left(-y^2+2atx+3bt^2,3x^2+at^2,-2ty\right)$.
+If $\left[0,x,y\right]$ is singular then
+$\left(0,0,0\right)=\left(-y^2,3x^2,0\right)$.
+This means that $x=y=0$ so there are no singular points at infinity.
+If $\left[1,x,y\right]$ is singular then
+$\left(0,0,0\right)=\left(-y^2+2ax+3b,3x^2+a,-2y\right)$.
+Equating the last coordinates gives $y=0$ so that
+\begin{equation}\label{Equation14}
+\left(0,0\right)=\left(2ax+3b,3x^2+a\right).
+\end{equation}
+Note that if $a$ were zero then \autoref{Equation14}
+would tell us that $b$ is also zero, contrary to the
+assumption that $4a^3+27b^2\ne 0$. Therefore $a\ne 0$.
+Equating the first coordinates of \autoref{Equation14}
+gives $x=-\frac{3b}{2a}$.
+Now equating the second coordinates of \autoref{Equation14}
+gives $0=3\left(-\frac{3b}{2a}\right)^2+a=\frac{27b^2}{4a^2}+a$
+Clearing fractions gives $0=27b^2+4a^3$ contrary to the
+assumption that $4a^3+27b^2\ne 0$. Therefore there are no
+affine singular points.
 \end{enumerate}
 \end{document}
