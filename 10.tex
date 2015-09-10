@@ -295,5 +295,24 @@ gives $0=3\left(-\frac{3b}{2a}\right)^2+a=\frac{27b^2}{4a^2}+a$
 Clearing fractions gives $0=27b^2+4a^3$ contrary to the
 assumption that $4a^3+27b^2\ne 0$. Therefore there are no
 affine singular points.
+
+\item %15
+Suppose that $\overline{a}
+=\left[a_0,a_1,\ldots,a_n\right]\in\mathbb{P}^n\left(\mathbb{Q}\right)$ lies
+on the curve defined by $x_0^{n+1}+px_1^{n+1}+p^2x_2^{n+1}
++\cdots+p^nx_n^{n+1}$. We can assume that $a_i\in\mathbb{Z}$ for
+all $0\le i\le n$ because if not, we can replace $a_0,a_1,\ldots,a_n$
+with $da_0,da_1,\ldots,da_n$ where $d$ is the product of denominators
+of $a_0,a_1,\ldots,a_n$. Furthermore, we can also assume that $p$
+does not divide all of $a_0,a_1,\ldots,a_n$ because if it does, then we
+can replace
+$a_0,a_1,\ldots,a_n$ with $\frac{a_0}{p},\frac{a_1}{p},\ldots,\frac{a_n}{p}$.
+Knowing that
+\[0=a_0^{n+1}+pa_1^{n+1}+p^2a_2^{n+1}
++\cdots+p^na_n^{n+1}\]
+tells us that $p\mid a_0^{n+1}$ which means that $p\mid a_0$.
+This means that $p^2\mid pa_1^{n+1}$ or $p\mid a_1^{n+1}$
+so that $p\mid a_1$. Continuing in this way we find that $p$ divides
+all of $a_0,a_1,\ldots,a_n$ in contradiction to our observation above.
 \end{enumerate}
 \end{document}
